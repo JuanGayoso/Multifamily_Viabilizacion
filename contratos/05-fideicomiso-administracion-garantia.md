@@ -1,6 +1,6 @@
 # Contrato Modelo de Fideicomiso de Administración y Garantía de Edificio de Vivienda en Renta
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -237,6 +237,14 @@ X3.1 El comprador bajo una compraventa futura del Edificio es Fideicomisario con
 **Opción X4. Patrimonio como arrendador directo**
 
 X4.1 El Fiduciario, en lugar del Fideicomitente, figura como arrendador en los contratos de arrendamiento, y el Administrador los gestiona por encargo del Fiduciario.
+
+**Opción X5. Cascada con la entidad concedente subordinada**
+
+X5.1 Si el Edificio está sobre suelo público conforme al contrato 12 (derecho de superficie sobre suelo público), el Fiduciario aplica el flujo del proyecto en este orden: (a) costos de operación, tributos y reservas; (b) a los inversionistas (servicio de la deuda y retorno del capital) hasta reducir a cero su saldo capitalizado; (c) a la entidad concedente hasta reducir a cero el saldo capitalizado del valor del terreno; (d) el excedente, en la proporción indicada en los Datos del Contrato.
+
+X5.2 La entidad concedente es fideicomisaria respecto de lo indicado en (c) y (d). El Fiduciario le informa los saldos cada trimestre.
+
+X5.3 La ejecución del patrimonio fideicometido por los financistas transfiere la posición del superficiario a un Cesionario Calificado y no extingue los derechos de la entidad concedente.
 
 ## Datos del Contrato
 

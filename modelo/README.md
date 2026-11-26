@@ -1,6 +1,7 @@
-# Modelo financiero: BTS frente a BTR en Lima Moderna
+# Modelos financieros
 
-Este modelo calcula las cifras del artículo [Vivienda en renta en Lima: qué tiene que ser cierto para que compita por el suelo](../articulo/financiamiento-vivienda-en-renta-peru.md). Las fórmulas y los supuestos están en la [memoria de cálculo](../articulo/memoria-de-calculo.md).
+- **Artículo 1**, [Vivienda en renta en Lima: dónde y bajo qué condiciones es viable hoy](../articulo/financiamiento-vivienda-en-renta-peru.md): BTS frente a BTR en Lima Moderna. Fórmulas en la [memoria de cálculo](../articulo/memoria-de-calculo.md).
+- **Artículo 2**, [¿Puede la vivienda en renta ayudar a cerrar la brecha de vivienda en Lima y Callao?](../articulo/btr-y-brecha-de-vivienda-lima-callao.md): BTR sobre suelo público en derecho de superficie. Fórmulas en la [memoria de cálculo del suelo público](../articulo/memoria-de-calculo-suelo-publico.md).
 
 ## Archivos
 
@@ -11,12 +12,17 @@ Este modelo calcula las cifras del artículo [Vivienda en renta en Lima: qué ti
 | `salida_consola.txt` | Resumen impreso por el modelo |
 | `construir_excel.py` | Genera `memoria-de-calculo.xlsx` con fórmulas que referencian la hoja Supuestos |
 | `memoria-de-calculo.xlsx` | El modelo en Excel. Cambie los valores en azul de la hoja Supuestos y el resto se recalcula; la hoja Resumen compara Excel con Python |
+| `modelo_suelo_publico.py` | Modelo anual del artículo 2: cascada inversionistas → Estado → excedente, relicitación, escenarios, sensibilidad, plazo mínimo y asequibilidad con bono. Usa los supuestos de `BASE` del modelo 1 |
+| `resultados_suelo_publico.json` | Salida del modelo del artículo 2 |
+| `construir_excel_suelo_publico.py` | Genera `memoria-suelo-publico.xlsx` |
+| `memoria-suelo-publico.xlsx` | Modelo del artículo 2 con fórmulas (régimen B, T1 + T2 ≤ 90 años); la hoja Resumen compara con Python |
 
 ## Cómo reproducir
 
 ```bash
 python3 modelo/modelo_multifamily.py      # escribe resultados.json
 python3 modelo/construir_excel.py         # escribe memoria-de-calculo.xlsx
+cd modelo && python3 modelo_suelo_publico.py && python3 construir_excel_suelo_publico.py   # artículo 2
 ```
 
 Requiere Python 3 y `openpyxl`. Abra el Excel en Excel o LibreOffice para que se calculen las fórmulas.

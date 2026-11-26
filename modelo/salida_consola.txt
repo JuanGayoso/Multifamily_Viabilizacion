@@ -93,6 +93,14 @@ Nicho: B + prima 20% + cap 6.00% + terreno a mercado           TIR eq  11.0% TIR
 
 Inversionista individual: {'y_bruto': 0.06386509635974305, 'y_neto': 0.04979698878000585, 'tir_10a': 0.0710984162572399}
 Después de IR: {'A': {'bts_tir_u_dir': 0.12343301411576801, 'btr_tir_u_dir': -0.0036717197548107317}, 'B': {'bts_tir_u_dir': 0.12343301411576801, 'btr_tir_u_dir': 0.018225788722729286}, 'A_unidades': {'bts_tir_u_dir': 0.12343301411576801, 'btr_tir_u_dir': 0.04008435280927114}}
+prima equilibrio {'regimen': 'A', 'cap': 0.06, 'vara': 'laxa 9%', 'prima': 0.22256833202118287, 'renta_usd': 145.85240201012712}
+prima equilibrio {'regimen': 'A', 'cap': 0.06, 'vara': 'estricta 14%', 'prima': 0.38585931588431777, 'renta_usd': 165.3330163849991}
+prima equilibrio {'regimen': 'A', 'cap': 0.065, 'vara': 'laxa 9%', 'prima': 0.31141599693819444, 'renta_usd': 156.4519284347266}
+prima equilibrio {'regimen': 'A', 'cap': 0.065, 'vara': 'estricta 14%', 'prima': 0.4620604595297664, 'renta_usd': 174.42381282190112}
+prima equilibrio {'regimen': 'B', 'cap': 0.06, 'vara': 'laxa 9%', 'prima': 0.1268980333129548, 'renta_usd': 134.4389353742355}
+prima equilibrio {'regimen': 'B', 'cap': 0.06, 'vara': 'estricta 14%', 'prima': 0.2654000839006585, 'renta_usd': 150.96223000934856}
+prima equilibrio {'regimen': 'B', 'cap': 0.065, 'vara': 'laxa 9%', 'prima': 0.2075436029344928, 'renta_usd': 144.059951830085}
+prima equilibrio {'regimen': 'B', 'cap': 0.065, 'vara': 'estricta 14%', 'prima': 0.3350278398966111, 'renta_usd': 159.2688212996657}
 {'distrito': 'Surquillo', 'per': 14.4453125, 'regimen': 'A', 'L_m2': 977.5708134922179, 'yoc': 0.06287967369090122, 'tir_u': 0.028957178588017607, 'ratio_u': 0.09000850159509222}
 {'distrito': 'Surquillo', 'per': 14.4453125, 'regimen': 'B', 'L_m2': 977.5708134922179, 'yoc': 0.06613544054615202, 'tir_u': 0.051993115017836766, 'ratio_u': 0.4123368067569725}
 {'distrito': 'Pueblo Libre', 'per': 14.930434782608696, 'regimen': 'A', 'L_m2': 720.5358536486109, 'yoc': 0.05808569143013998, 'tir_u': 0.009518104497105995, 'ratio_u': -0.4654512229199818}

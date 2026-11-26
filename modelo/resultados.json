@@ -1217,6 +1217,64 @@
    "ratio_u": -0.9727336350112152
   }
  ],
+ "sens_renta": [
+  {
+   "regimen": "A",
+   "cap": 0.06,
+   "vara": "laxa 9%",
+   "prima": 0.22256833202118287,
+   "renta_usd": 145.85240201012712
+  },
+  {
+   "regimen": "A",
+   "cap": 0.06,
+   "vara": "estricta 14%",
+   "prima": 0.38585931588431777,
+   "renta_usd": 165.3330163849991
+  },
+  {
+   "regimen": "A",
+   "cap": 0.065,
+   "vara": "laxa 9%",
+   "prima": 0.31141599693819444,
+   "renta_usd": 156.4519284347266
+  },
+  {
+   "regimen": "A",
+   "cap": 0.065,
+   "vara": "estricta 14%",
+   "prima": 0.4620604595297664,
+   "renta_usd": 174.42381282190112
+  },
+  {
+   "regimen": "B",
+   "cap": 0.06,
+   "vara": "laxa 9%",
+   "prima": 0.1268980333129548,
+   "renta_usd": 134.4389353742355
+  },
+  {
+   "regimen": "B",
+   "cap": 0.06,
+   "vara": "estricta 14%",
+   "prima": 0.2654000839006585,
+   "renta_usd": 150.96223000934856
+  },
+  {
+   "regimen": "B",
+   "cap": 0.065,
+   "vara": "laxa 9%",
+   "prima": 0.2075436029344928,
+   "renta_usd": 144.059951830085
+  },
+  {
+   "regimen": "B",
+   "cap": 0.065,
+   "vara": "estricta 14%",
+   "prima": 0.3350278398966111,
+   "renta_usd": 159.2688212996657
+  }
+ ],
  "terreno_fraccion": [
   {
    "fraccion": 0.0,

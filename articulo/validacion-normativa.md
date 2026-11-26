@@ -151,3 +151,24 @@ La versión 2.0 del artículo cuantifica el efecto de cada norma en el modelo fi
 | TUO Ley de Tributación Municipal (DS 156-2004-EF): alcabala 3% | Costo de adquisición del terreno | 3% | Contrastada (corpus, v1.0) |
 
 **Conclusión normativa.** El resultado central del artículo (el BTR no compite por el suelo en Lima Moderna a precio de mercado con el régimen actual) depende solo de normas contrastadas: el IGV del arrendamiento y de la primera venta. Los escenarios que mejoran el BTR (régimen B, D.Leg. 973, salida a FIBRA) dependen de normas pendientes o de proyectos no aprobados, y así se presentan en el artículo.
+
+## 6. Normas que usa el artículo 2 (suelo público) y el contrato 12
+
+El artículo [*¿Puede la vivienda en renta ayudar a cerrar la brecha de vivienda en Lima y Callao?*](btr-y-brecha-de-vivienda-lima-callao.md) y el [contrato 12](../contratos/12-derecho-de-superficie-suelo-publico.md) se apoyan en las normas siguientes. Ninguna se contrastó contra el corpus en esta revisión. Las referencias vienen de fuentes secundarias citadas en el artículo y deben confirmarse en el SPIJ o en El Peruano.
+
+| Norma | Qué usa la propuesta | Supuesto | Estado |
+|---|---|---|---|
+| Código Civil, arts. 1030-1034 (derecho de superficie) | Cesión del suelo por 45 años con reversión del edificio sin reembolso | Plazo máximo de 99 años; la reversión sin pago requiere pacto expreso | **Verificar texto**; confirmar con un abogado si el pacto es válido cuando el concedente es una entidad pública |
+| Ley 29151 (Sistema Nacional de Bienes Estatales) y su reglamento | Facultad de la entidad para otorgar derecho de superficie sobre predios estatales | Se puede otorgar por concurso, a valor de mercado | **Pendiente**: procedimiento, autorizaciones y plazos máximos para actos de administración |
+| D.Leg. 1362 (APP) | Alternativa de encuadre si la operación califica como asociación público privada | No modelado | **Pendiente**: determinar si aplica |
+| Ley 31313 y D.Leg. 1674 | Instrumentos de gestión del suelo; Fondo MIVIVIENDA como Operador Público del Suelo | Fuente secundaria (boletín IVUDS-URP) | **Pendiente**: confirmar las funciones vigentes del Operador Público del Suelo tras el D.Leg. 1674 |
+| Ley 30952 (Bono de Arrendamiento para Vivienda) y reglamento | Bono de S/ 500 al mes por 5 años; 70% alquiler y 30% ahorro; renta elegible de S/ 890 a S/ 1,840 (gob.pe) | Monto vigente; ingreso tope por verificar | **Verificar**: el PL 58-2026 propone ampliarlo |
+| Techo Propio (Bono Familiar Habitacional) | Tope de ingreso de S/ 3,715 (AVN) y S/ 2,706 (CSP y Mejoramiento); valor máximo de la VIS de S/ 109,100 | Destinos de graduación | Fuentes oficiales (El Peruano, MVCS, 2026); verificar actualización anual |
+| Nuevo Crédito Mivivienda y Bono del Buen Pagador | Destino de graduación | No modelado | **Pendiente**: valores 2026 |
+| Ley 30532 (FIBRA) y reglamento de la SMV | Tenedor de largo plazo del derecho de superficie | Un derecho de superficie es activo elegible | **Pendiente**: confirmar con la SMV y un tributarista |
+| PLANMET 2040 (Municipalidad Metropolitana de Lima) | Criterios de selección de suelo | Ordenanza 2499-2022-MML, a confirmar | **Pendiente**: número de ordenanza y vigencia |
+| Colombia: Estatuto Tributario, art. 476, num. 15 | Referencia de paridad: arrendamiento de vivienda excluido del IVA | Fuente secundaria (Gerencie, Actualícese) | Referencia comparada; no aplica en el Perú |
+| Chile: D.L. 825 (IVA) y criterio del SII | Referencia de paridad: arriendo de inmueble sin amoblar no gravado | Fuente oficial (SII) | Referencia comparada |
+| Chile: DS 52 (V. y U.) de 2013 y línea Arriendo a Precio Justo | Antecedente de suelo público para vivienda en renta (comodato) | Fuente oficial (BCN, Diario Oficial) | Referencia comparada |
+
+**Conclusión normativa del artículo 2.** La viabilidad sin subsidio depende de una norma que aún no existe: la paridad del IGV del alquiler de vivienda por empresas (régimen B). El encuadre jurídico de la cesión (derecho de superficie bajo la Ley 29151 o APP bajo el D.Leg. 1362) y la elegibilidad del derecho de superficie para una FIBRA son las dos validaciones legales que deben hacerse antes de un piloto.

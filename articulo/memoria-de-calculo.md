@@ -2,7 +2,7 @@
 
 **Vivienda para venta (BTS) frente a vivienda para renta (BTR) en Lima Moderna**
 
-Versión 2.0 · 25 de noviembre de 2026 · Acompaña al artículo [Vivienda en renta en Lima: qué tiene que ser cierto para que compita por el suelo](financiamiento-vivienda-en-renta-peru.md)
+Versión 2.1 · 26 de noviembre de 2026 · Acompaña al artículo [Vivienda en renta en Lima: dónde y bajo qué condiciones es viable hoy](financiamiento-vivienda-en-renta-peru.md). Los cálculos del artículo 2 (suelo público) están en [memoria-de-calculo-suelo-publico.md](memoria-de-calculo-suelo-publico.md).
 
 Esta memoria describe todos los cálculos para que un tercero pueda revisarlos, reproducirlos o cambiarlos. Hay tres implementaciones equivalentes:
 
@@ -255,6 +255,29 @@ Ratio entre el terreno residual BTR con la vara laxa (*r* = cap + 2.5%) y el ter
 - **Régimen A:** prima de 20% con cap de 5.5%; prima de 30% con cap ≤ 6.0%.
 
 Con la vara estricta (capital al 14%), el umbral es más exigente: solo régimen B con prima de 20% y cap de 5.5% (ratio 1.03), y prima de 30% con cap ≤ 6.0%.
+
+### 8.1 Prima de renta de equilibrio (tabla 9-bis del artículo)
+
+La función `prima_equilibrio(reg, cap, estricta)` busca por bisección, en el intervalo [0%, 150%], la prima de renta *x* tal que el terreno residual del BTR iguale al de mercado:
+
+- Vara laxa: `ratio_terreno_u(x) = 1`, TIR no apalancada de 9%.
+- Vara estricta: `ratio_terreno(x) = 1`, TIR del capital de 14%.
+
+La prima solo se aplica a la renta del BTR. El precio de mercado del terreno sigue siendo el residual BTS de Lima Moderna. La renta implícita es US$ 119.3 × (1 + *x*). Resultados en `resultados.json → sens_renta`:
+
+| Régimen | Cap | Laxa | Estricta |
+|---|---|---|---|
+| A | 6.0% | 22.3% (US$ 145.9) | 38.6% (US$ 165.3) |
+| A | 6.5% | 31.1% (US$ 156.5) | 46.2% (US$ 174.4) |
+| B | 6.0% | 12.7% (US$ 134.4) | 26.5% (US$ 151.0) |
+| B | 6.5% | 20.8% (US$ 144.1) | 33.5% (US$ 159.3) |
+
+**Contraste con los edificios lanzados.** Ricardo Palma 251 ofrece unidades de 53 a 60 m² desde S/ 2,909 al mes:
+
+- Renta por m² al año: 2,909 × 12 / 3.41 / 56.5 m² = **US$ 181 por m² al año** (rango: 171 con 60 m² y 193 con 53 m²).
+- Prima frente a Lima Moderna: 181 / 119.3 − 1 = **+52%**.
+
+Es renta de oferta, con amoblado y servicios, en suelo de Lima Top. El contraste es indicativo, no una validación.
 
 ## 9. Prueba después de Impuesto a la Renta
 

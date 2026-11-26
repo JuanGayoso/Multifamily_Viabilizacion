@@ -1,14 +1,24 @@
-# Vivienda en renta en Lima: qué tiene que ser cierto para que compita por el suelo
+# Vivienda en renta en Lima: dónde y bajo qué condiciones es viable hoy
 
-**Neutralidad tributaria, costo de capital e ingeniería financiera, medidos con datos de mercado**
+**Un primer esbozo de viabilidad de mercado: producto, estrato, neutralidad tributaria y costo de capital, medidos con datos**
 
-Por: Juan Germán Gayoso Arnillas · Versión 2.0 · 25 de noviembre de 2026
+Por: Juan Germán Gayoso Arnillas · Versión 2.1 · 26 de noviembre de 2026
+
+Primero de dos artículos. Este mide cuándo el multifamily funciona **en el mercado**, sin ayuda del Estado. El segundo, [*¿Puede la vivienda en renta ayudar a cerrar la brecha de vivienda en Lima y Callao?*](btr-y-brecha-de-vivienda-lima-callao.md), pregunta si puede contribuir a la vivienda de la brecha y bajo qué modelo de negocio.
 
 Modelo reproducible: [`modelo/modelo_multifamily.py`](../modelo/modelo_multifamily.py) · Hoja de cálculo con fórmulas: [`modelo/memoria-de-calculo.xlsx`](../modelo/memoria-de-calculo.xlsx) · Memoria de cálculo: [`memoria-de-calculo.md`](memoria-de-calculo.md) · Revisión de pares: [`revision-de-pares.md`](revision-de-pares.md)
 
 ---
 
 ## Conclusión
+
+**Dónde encaja hoy.** El multifamily de mercado en Lima es un producto de nicho, y el modelo explica por qué:
+
+- **Producto:** departamentos de 40 a 60 m², amoblados, con amenities y gestión profesional.
+- **Estrato:** inquilinos de ingresos medios-altos, con alquileres de S/ 2,400 a S/ 3,000 al mes.
+- **Ubicación:** Lima Top y la parte más cara de Lima Moderna.
+
+Ahí logra la prima de renta que necesita para pagar el terreno. Es lo que han hecho los edificios ya lanzados: LiveSpace La Mar, Av. Ricardo Palma 251 y los proyectos de Miraflores y San Isidro (sección 8.1). Fuera de ese nicho, en el producto promedio, el modelo no cierra:
 
 Con precios, alquileres, tasas y normas vigentes a noviembre de 2026, un edificio de vivienda para renta (*build-to-rent*, BTR) en Lima Moderna **no puede pagar el precio de mercado del terreno**, que fija el proyecto de vivienda para venta (*build-to-sell*, BTS). Hay que distinguir dos cosas:
 
@@ -22,6 +32,8 @@ Con precios, alquileres, tasas y normas vigentes a noviembre de 2026, un edifici
   El BTR compite por suelo de mercado solo cuando se combinan neutralidad del IGV (alquiler exonerado, como el de la persona natural), una prima de renta de al menos 20% bien sustentada y un cap de salida de 6.0% o menos. Fuera de eso, es viable en nichos donde el suelo no se paga a precio BTS: aporte de terreno por un propietario patrimonial, joint ventures o tierra que ya está en balance.
 
 En el caso base el edificio vale menos de lo que cuesta. Su rendimiento sobre costo (5.69%) está por debajo del cap rate de salida (6.50%). Ninguna estructura de deuda corrige un margen de desarrollo negativo: con deuda más cara que el rendimiento del activo, el apalancamiento empeora la TIR del capital.
+
+Este es un primer esbozo. Mide un proyecto tipo con datos de oferta, y la prima de renta, que es la variable decisiva, todavía no tiene una serie pública. Por eso debe leerse como un mapa de condiciones y no como un veredicto sobre cada terreno.
 
 La tesis de la neutralidad competitiva sigue en pie: el Estado no debe darle al multifamily ventajas que el arrendador persona natural no tiene. El modelo muestra que hoy la cancha está inclinada *en contra* del multifamily, sobre todo por el IGV, y que nivelarla es condición necesaria pero no suficiente.
 
@@ -173,6 +185,19 @@ Estado normativo, a verificar al decidir:
 - Es un proyecto, no una ley. Su texto final puede variar, y el tratamiento del crédito fiscal debe verificarse con un tributarista.
 - El D.Leg. 973 exige un contrato de inversión con el Estado, una inversión mínima de US$ 5 millones y una etapa preproductiva de al menos dos años. Un edificio de 100 unidades está en el límite.
 
+### 6.1 ¿Qué asimetrías son temporales y cuáles permanentes?
+
+| Asimetría frente al BTS | Naturaleza | Qué la corrige |
+|---|---|---|
+| IGV sobre el alquiler de empresas | Temporal: la crea la norma | Paridad: alquiler de vivienda exonerado, como en Colombia (ET art. 476) y Chile (SII: arriendo sin amoblar no gravado) |
+| IR que el arrendador informal no paga | Temporal: la crea la falta de fiscalización | Fiscalización y cruce con el RAV y SUNARP |
+| Prima de riesgo por falta de historia | Temporal: baja con información | Serie pública de rentas y morosidad; rent rolls estandarizados |
+| Falta de deuda de largo plazo en soles | Temporal: baja con mercado de capitales | Titulización, FIBRA, AFP |
+| Reciclaje de capital: 3-4 años en BTS frente a 10 o más en BTR | **Permanente** | Capital por etapas: cada inversionista entra y sale según su horizonte |
+| Retorno bajo que acepta el comprador que invierte, y que fija el precio del suelo | **Permanente** | Ninguna política tributaria: refleja preferencias |
+
+Corregir las cuatro primeras es necesario y no cuesta subsidios. Las dos últimas explican por qué, aun corregidas, el BTR solo compite por el suelo donde logra una prima de renta. El [artículo 2](btr-y-brecha-de-vivienda-lima-callao.md) trata qué hacer si se quiere vivienda en renta fuera de ese nicho.
+
 ## 7. Lo que la ingeniería financiera sí hace, y lo que no
 
 **Tabla 8. Efecto de cada palanca financiera** (régimen A, terreno a precio de mercado).
@@ -218,6 +243,35 @@ Cómo leer el mapa:
 - **¿Qué significa "prima de renta"?** Es lo que el edificio institucional cobra por m² por encima del promedio distrital: producto nuevo, unidades pequeñas, amoblado, servicios y gestión profesional, neto del sobreprecio que ese mismo producto tendría en venta. El comprador BTS también puede construir unidades pequeñas y venderlas más caras.
 - **Lo que se puede afirmar.** No hay una serie pública que mida esa prima en Lima. Es el dato más importante por levantar (sección 11). Los avisos de renta son mayormente de unidades usadas y los de venta, de proyectos nuevos, lo que sugiere una prima por producto nuevo de algunos puntos. Una prima de 20% o más debe demostrarse con contratos firmados, no suponerse.
 
+### 8.1 Dónde sí cierra hoy: la prima que hace falta y los casos en operación
+
+**Tabla 9-bis. Prima de renta con la que el BTR paga el terreno de mercado** (renta de oferta equivalente; base: US$ 119.3 por m² al año en Lima Moderna; sale de la función `sens_renta` del modelo).
+
+| Régimen de IGV | Cap de salida | Vara laxa (9% sin deuda) | Vara estricta (14% al capital) |
+|---|---|---|---|
+| A (vigente) | 6.0% | +22% (US$ 146) | +39% (US$ 165) |
+| A (vigente) | 6.5% | +31% (US$ 156) | +46% (US$ 174) |
+| B (exonerado) | 6.0% | +13% (US$ 134) | +27% (US$ 151) |
+| B (exonerado) | 6.5% | +21% (US$ 144) | +34% (US$ 159) |
+
+**Tabla 9-ter. Edificios multifamily lanzados en Lima** (datos de oferta; nov-2026 salvo indicación).
+
+| Edificio | Ubicación | Producto | Alquiler de oferta | Renta implícita |
+|---|---|---|---|---|
+| Av. Ricardo Palma 251 | Miraflores | 280 unidades de 1-2 dormitorios, 53-60 m² | Desde S/ 2,909 al mes | ≈ US$ 170-190 por m² al año |
+| LiveSpace La Mar (Parque Arauco; inversión de US$ 16 millones; LEED Silver) | Miraflores | Unidades de 1 dormitorio y 1 dormitorio + estudio | S/ 2,385 a S/ 2,970 al mes | Área por verificar |
+| Mercado multifamily de Lima (Gestión) | Lima Top | 160 unidades en operación y ~900 en construcción (nov-2024) | Más de S/ 2,400 al mes (jun-2024) | — |
+
+Cómo se leen las dos tablas:
+
+- **La renta de oferta de los edificios lanzados es entre 45% y 60% mayor que el promedio de Lima Moderna.** Supera incluso la prima más exigente de la tabla 9-bis (+46%, IGV vigente, vara estricta).
+- **No es casualidad que estén en Miraflores.** Es donde el producto institucional logra esa prima.
+- **Hay que hacer dos precisiones:**
+  - el suelo de Lima Top es más caro que el de Lima Moderna, así que la comparación es con el terreno de Lima Moderna y sobrestima el margen real de esos proyectos;
+  - las rentas son de oferta e incluyen amoblado y servicios, mientras que el modelo supone una renta de cierre sin servicios.
+- **Lo que sí se puede afirmar:** el patrón de lanzamientos coincide con el mapa de viabilidad. Hay multifamily donde el alquiler soporta una prima de 30% o más, y no lo hay en el resto de Lima.
+- **Para el promotor,** la regla práctica es demostrar esa prima con contratos firmados antes de comprar el terreno.
+
 **Tabla 10. Casos de nicho y alternativas de salida.**
 
 | Caso | YoC | TIR no apalancada | TIR del capital | Lectura |
@@ -227,7 +281,7 @@ Cómo leer el mapa:
 | A + prima 10% + cap 6.0% + terreno al 50% | 7.28% | 8.4% | 7.1% | No alcanza con el IGV vigente |
 | B + prima 10% + cap 6.0% + terreno aportado sin costo | 8.51% | 15.6% | 21.2% | El propietario del suelo que quiere renta es el socio natural |
 | B + prima 20% + cap 6.0% + terreno a mercado | 7.55% | 10.7% | 11.0% | Viable con la vara laxa |
-| A con salida por venta de unidades a personas naturales | 5.69% | 6.4% | 4.4% | Captura la brecha de la sección 5, pero es un BTS diferido |
+| A con salida por venta de unidades a personas naturales | 5.69% | 6.4% | 4.4% | Captura la brecha de la sección 5, pero es un BTS diferido: retira la vivienda del alquiler y no se recomienda como estrategia de vivienda en renta |
 | A con tenencia de 10 años | 5.69% | 5.1% | 2.9% | El tiempo diluye el arrastre del crédito fiscal, no la brecha |
 | B con tenencia de 10 años | 6.00% | 6.2% | 4.4% | |
 
@@ -268,7 +322,7 @@ Los distritos con PER más bajo (Surquillo, Lince) son los menos desfavorables, 
 5. **Neutralidad del IGV, no ventaja.** Exonerar el alquiler de vivienda por empresas, con el crédito fiscal de obra como costo (régimen B), replica la situación de la persona natural. Una tasa cero con devolución no se justifica.
 6. **Información.** Una serie pública de rentas de cierre, vacancia y morosidad (BCRP/SBS a partir de los registros del RAV y del FUA del D.Leg. 1177) reduciría la prima de riesgo más que cualquier incentivo.
 7. **Predial y licencias.** Revisen si la progresividad del predial por propietario debe aplicarse por unidad de vivienda en edificios de renta. Cumplir los plazos de la Ley 29090 baja el costo de capital de la fase de licencias.
-8. **Vivienda social en arrendamiento.** La Ley 32379 (VIS) y su reglamento en consulta (RM 269-2026-VIVIENDA) son el lugar para un subsidio *explícito* a la demanda (Bono de Arrendamiento). No corresponde un subsidio al vehículo.
+8. **Vivienda social en arrendamiento.** La Ley 32379 (VIS) y su reglamento en consulta (RM 269-2026-VIVIENDA) son el lugar para un subsidio *explícito* a la demanda (Bono de Arrendamiento, Ley 30952). No corresponde un subsidio al vehículo. Si se quiere vivienda en renta para la brecha, el instrumento que no subsidia el modelo es el suelo público cedido en derecho de superficie y cobrado en la cascada de retornos. Se desarrolla en el [artículo 2](btr-y-brecha-de-vivienda-lima-callao.md).
 
 ## 11. Riesgos y límites del análisis
 
@@ -286,7 +340,8 @@ Los distritos con PER más bajo (Surquillo, Lince) son los menos desfavorables, 
 | Dato | Valor usado | Fuente sugerida |
 |---|---|---|
 | Precio y alquiler de cierre por tipología | Oferta − 4% | Tasaciones; registros SUNARP; RAV (D.Leg. 1177) |
-| Prima de renta del producto institucional | 0% base; mapa de 0%-30% | Rent rolls de edificios en operación (contrato 04) |
+| Prima de renta del producto institucional | 0% base; mapa de 0%-30%; equilibrio de 13%-46% (tabla 9-bis) | Rent rolls de edificios en operación (contrato 04) |
+| Renta de cierre y área de los edificios lanzados (LiveSpace La Mar, Ricardo Palma 251) | Oferta: US$ 170-190 por m² al año | Operadores; avisos actualizados; tasaciones |
 | Incidencia del terreno en Lima Moderna | 15.7% de las ventas | Transacciones de terrenos; tasadores |
 | Costo directo por m² techado | S/ 2,050 sin IGV | Presupuestos de constructoras; CAPECO; índices INEI |
 | Tasa del crédito de obra y del mini-perm en soles | 10.0% y 9.0% TEA | SBS, tasas activas de medianas y grandes empresas; cotizaciones bancarias |
@@ -315,6 +370,11 @@ Los distritos con PER más bajo (Surquillo, Lince) son los menos desfavorables, 
 16. CMS Grau, proyecto de reglamento de la Ley 32379 (RM 269-2026-VIVIENDA): https://cms.law/en/per/publication/publican-el-proyecto-de-reglamento-de-la-ley-de-vivienda-de-interes-social-vis
 17. Urbania, rentabilidad bruta por distrito (actualizado al 27-may-2026): https://urbania.pe/blog/se-amplio-el-plazo-de-retornos-para-las-inversiones-en-inmuebles-de-lima/
 18. Gestión, ASEI y ADI sobre por qué no despega el multifamily: https://gestion.pe/tu-dinero/inmobiliarias/vivienda-alquiler-de-vivienda-venta-de-vivienda-multifamily-mvcs-viviendas-para-alquiler-no-despegan-lo-que-hace-falta-para-impulsarlas-noticia/
-19. TUO de la Ley del IGV (DS 055-99-EF); TUO de la Ley del Impuesto a la Renta (DS 179-2004-EF), arts. 39 y 52-A; Ley 30532 (FIBRA); D.Leg. 973 y DS 084-2007-EF; D.Leg. 776 (Tributación Municipal); D.Leg. 1177; Ley 29090; Ley 31313; Ley 32379. Texto oficial en el Sistema Peruano de Información Jurídica (SPIJ) y El Peruano.
+19. Gestión, "Fondos y hasta seis inmobiliarias con interés en desarrollo multifamily" (18-nov-2024): https://gestion.pe/economia/empresas/fondos-y-hasta-seis-inmobiliarias-con-interes-en-desarrollo-multifamily-que-lo-gatillara-alquiler-de-departamentos-lima-moderna-lima-top-mercado-inmobiliario-noticia/
+20. Gestión, "Lima contará con más 1,000 departamentos de renta inmobiliaria en 2025" (23-jun-2024): https://gestion.pe/economia/empresas/lima-contara-con-mas-1000-departamentos-de-renta-inmobiliaria-en-2025-donde-estaran-multifamily-empresa-miraflores-san-isidro-noticia/
+21. Perú Retail, Parque Arauco lanza LiveSpace La Mar: https://www.peru-retail.com/parque-arauco-lanza-su-primer-proyecto-multifamily-en-peru-con-inversion-de-us-16-millones/
+22. Urbania, avisos de LiveSpace La Mar y Av. Ricardo Palma 251 (consultados en nov-2026): https://urbania.pe/inmueble/clasificado/alclapin-alquiler-de-departamento-en-miraflores-lima-1-dormitorio-147497922 y https://urbania.pe/buscar/alquiler-de-departamentos-en-huertos-de-san-antonio--lote-38-39---santiago-de-surco--lima--lima
+23. Gerencie (Colombia, ET art. 476, num. 15) y SII de Chile (arriendo sin amoblar no gravado con IVA): https://www.gerencie.com/impuesto-a-las-ventas-en-el-arrendamiento-de-inmuebles.html y https://www.sii.cl/preguntas_frecuentes/impuestos_mensuales/001_130_1214.htm
+24. TUO de la Ley del IGV (DS 055-99-EF); TUO de la Ley del Impuesto a la Renta (DS 179-2004-EF), arts. 39 y 52-A; Ley 30532 (FIBRA); D.Leg. 973 y DS 084-2007-EF; D.Leg. 776 (Tributación Municipal); D.Leg. 1177; Ley 29090; Ley 31313; Ley 32379. Texto oficial en el Sistema Peruano de Información Jurídica (SPIJ) y El Peruano.
 
 *Este artículo es un análisis financiero y no constituye asesoría legal, tributaria ni de inversión. Las afirmaciones normativas deben validarse con abogados y tributaristas antes de estructurar una operación.*

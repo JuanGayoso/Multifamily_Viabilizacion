@@ -1,6 +1,6 @@
 # Acuerdo Modelo entre Acreedores para Proyectos de Vivienda en Renta (Intercreditor Agreement)
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -185,6 +185,14 @@ X2.1 La Deuda Senior puede refinanciarse con otro acreedor hasta el mismo monto.
 **Opción X3. Tramo de compraventa futura**
 
 X3.1 Si existe una compraventa futura del Proyecto, el precio se aplica según la prelación de este acuerdo, y el acuerdo directo con el comprador forma parte de este acuerdo.
+
+**Opción X4. Posición de la entidad concedente**
+
+X4.1 Si el Edificio está sobre suelo público conforme al contrato 12 (derecho de superficie sobre suelo público), las partes reconocen que la entidad concedente cobra el valor del terreno después del servicio de la deuda senior y mezzanine y del retorno del capital, y antes del excedente.
+
+X4.2 Ningún acreedor puede, por acuerdo entre acreedores, cambiar la posición de la entidad concedente en la cascada ni la reversión del Edificio sin pago al final del primer periodo.
+
+X4.3 En la ejecución, los acreedores transfieren la posición del superficiario completa, con sus obligaciones frente a la entidad concedente.
 
 ## Datos del Contrato
 

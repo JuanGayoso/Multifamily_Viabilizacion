@@ -94,3 +94,35 @@ Por eso el artículo se rehízo desde cero, con un modelo publicado (`modelo/`),
 | A5 | Tasas del BCRP | BCRPData bloqueó la descarga automática; se usaron como supuestos con fecha | Descarga manual de BCRPData |
 
 **Limitaciones del método.** La revisión la hizo el mismo autor del modelo, en rondas sucesivas. Eso detecta errores de consistencia, pero no reemplaza una revisión independiente. Antes de usar el modelo para una decisión de inversión, un tercero debe revisar la memoria de cálculo y la hoja Excel, y un tributarista debe validar los regímenes de IGV.
+
+
+## Ronda 4: artículo 2 (suelo público), reencuadre del artículo 1 y contratos
+
+Fecha: 26 de noviembre de 2026 · Alcance: `modelo_suelo_publico.py`, `memoria-suelo-publico.xlsx`, artículo 2 y su memoria, artículo 1 v2.1, contratos 01-12.
+
+| # | Hallazgo | Gravedad | Corrección |
+|---|---|---|---|
+| 4.1 | El modelo del artículo 2 cobraba la renta sobre el 100% del área (renta₀ × ocup / 95%) y no sobre el 95% ocupado, a diferencia del modelo del artículo 1. Sobrestimaba la renta en 5.3% y el VPN del Estado en ~S/ 460 por m² | **Alta**: cambiaba el plazo de equilibrio | Corregido (renta₀ × ocup). Con 40 años, el VPN del Estado bajó de +496 a +30. El plazo propuesto pasó de 40 a 45 años |
+| 4.2 | El opex se escalaba con el crecimiento del costo de construcción, no con el del opex | Baja (mismo valor, 3%) | Corregido |
+| 4.3 | La TIR daba "nan" con T1 = 35, porque había una renovación en el último año y el intervalo de búsqueda era estrecho | Media | Las renovaciones de los dos últimos años las asume la relicitación; intervalo [−50%, 100%] |
+| 4.4 | Antes de corregir el error 4.1, el capital al 8% aparecía como viable para el Estado (VPN +128) y el plazo mínimo con 8% era de 34 años. Con la corrección, el VPN es −266 y el plazo mínimo, 59 años | Alta | Se actualizaron las tablas. La conclusión dice que el margen es estrecho y nombra las variaciones que lo vuelven negativo (alquiler −10%, costo +10%, capital al 8%) |
+| 4.5 | El bono a la demanda puede subir los alquileres (capitalización) | Media | Se agregó la §8.3: el bono se aplica a oferta nueva y la renta queda topada e indexada al IPC |
+| 4.6 | La etapa de desarrollo rinde 9.4% sin deuda: no atrae a un desarrollador a riesgo | Media | La propuesta y el contrato 12 (cl. 52) usan *forward funding*: honorario e incentivo para el desarrollador |
+| 4.7 | La tabla 8 del artículo 2 mezclaba el costo fiscal con 100% y con 50% de unidades con bono | Baja | Se muestran ambos valores |
+| 4.8 | El contrato 11 decía que el valor de un plazo finito de 40 años es "materialmente menor" que el de capitalización | Media: es ~8% menor | Se reemplazó por el factor 1 − (1.025/1.09)^n con valores de 40, 20 y 10 años |
+| 4.9 | El artículo 1 comparaba la renta de los edificios de Miraflores con el terreno de Lima Moderna | Media: sobrestima su margen | Se aclara en la §8.1; el contraste es indicativo |
+| 4.10 | La conversión a venta al vencimiento convertía el programa en un BTS diferido con suelo público | Alta (diseño) | Se retiró. El artículo 2 y el contrato 12 (cl. 82) prevén la relicitación |
+
+**Verificación numérica.** La hoja Excel del artículo 2 (2,054 fórmulas, sin errores tras recalcular con LibreOffice) reproduce los doce indicadores del caso base con diferencia cero frente a Python. Las cifras de los artículos y de la memoria se cotejaron contra `resultados_suelo_publico.json` y `resultados.json` (sección `sens_renta`). Las cifras previas del artículo 1 no cambian: la función nueva solo agrega resultados.
+
+**Observaciones abiertas que no cambian la conclusión pero deben resolverse antes de un piloto:**
+
+1. El costo combinado del capital de 7.5% es opinión profesional, sin transacciones que lo validen. Es el supuesto más sensible.
+2. Falta confirmar si una FIBRA puede tener un derecho de superficie y cuál es el encuadre jurídico de la cesión (Ley 29151 o APP).
+3. Las cifras de déficit vienen del Censo 2017. Deben actualizarse con el Censo 2025.
+4. El conteo de unidades multifamily en operación (160) es de noviembre de 2024.
+5. Las rentas de los casos son de oferta. Se necesitan rent rolls.
+
+## Estado final (actualizado)
+
+Los dos artículos cumplen el criterio de cierre. La conclusión del artículo 2 (contribución posible sin subsidio, con margen estrecho y solo en suelo bien ubicado) se mantiene en todas las pruebas de sensibilidad reportadas. Las condiciones en que deja de cumplirse se informan en el texto.

@@ -456,6 +456,35 @@ DISTRITOS = [  # BCRP NE 16-2026, IV-2025: US$/m2 precio, US$/m2/año alquiler
 ]
 
 
+def prima_equilibrio(reg, cap, estricta=False, lo=0.0, hi=1.5):
+    """Prima de renta sobre el promedio de Lima Moderna con la que el BTR paga el terreno de mercado (ratio = 1)."""
+    k = "ratio_terreno" if estricta else "ratio_terreno_u"
+    f = lambda x: evaluar(var(regimen=reg, prima_renta=x, cap_salida=cap))["btr"][k] - 1.0
+    if f(lo) >= 0:
+        return lo
+    if f(hi) < 0:
+        return None
+    for _ in range(40):
+        m = (lo + hi) / 2
+        if f(m) >= 0:
+            hi = m
+        else:
+            lo = m
+    return hi
+
+
+def sens_renta():
+    """Prima de renta de equilibrio y renta implícita (US$/m2/año de oferta), por régimen, cap y vara."""
+    out = []
+    for reg in ("A", "B"):
+        for cap in (0.060, 0.065):
+            for estricta in (False, True):
+                x = prima_equilibrio(reg, cap, estricta)
+                out.append(dict(regimen=reg, cap=cap, vara="estricta 14%" if estricta else "laxa 9%",
+                                prima=x, renta_usd=None if x is None else BASE["renta_oferta_usd"] * (1 + x)))
+    return out
+
+
 def sens_distritos():
     out = []
     for nm, pr, rt in DISTRITOS:
@@ -511,10 +540,12 @@ if __name__ == "__main__":
     dir_ = {k: despues_ir(var(**kw)) for k, kw in [("A", {}), ("B", dict(regimen="B")), ("A_unidades", dict(salida="unidades"))]}
     print("Después de IR:", dir_)
     dist = sens_distritos()
+    sr = sens_renta()
+    for x in sr: print('prima equilibrio', x)
     for d in dist: print(d)
     res = dict(supuestos={k: (v if not isinstance(v, dict) else {str(a): b for a, b in v.items()}) for k, v in BASE.items()},
                base={k: v for k, v in base.items() if not k.startswith("_")},
-               escenarios=sc, mapa=grid, bts_sens=sb, individual=ind, despues_ir=dir_, distritos=dist,
+               escenarios=sc, mapa=grid, bts_sens=sb, individual=ind, despues_ir=dir_, distritos=dist, sens_renta=sr,
                terreno_fraccion=hurdle_equivalente(),
                flujos=dict(bts_eq=base["_f"]["bts_e"], btr_eq=base["_f"]["btr_e"],
                            btr_u=base["_f"]["btr_u"], bts_u=base["_f"]["bts_u"]))

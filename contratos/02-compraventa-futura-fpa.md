@@ -1,6 +1,6 @@
 # Contrato Modelo de Compraventa Futura de Edificio de Vivienda en Renta (Forward Purchase Agreement)
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -431,6 +431,16 @@ X5.1 El Precio se calcula en soles y se paga en la moneda indicada en los Datos 
 X6.1 Si el Edificio incluye unidades de vivienda de interés social en arrendamiento, el Vendedor cumple los requisitos de la norma de vivienda social aplicable para esas unidades.
 
 X6.2 Las rentas de esas unidades se incluyen en el cálculo del Precio solo por el monto que paga el arrendatario y, si corresponde, por el subsidio efectivamente asignado a la unidad. El subsidio va a la familia arrendataria, no al Vendedor ni al Comprador.
+
+**Opción X7. Compraventa del derecho de superficie estabilizado**
+
+X7.1 Si el Edificio está sobre suelo público conforme al contrato 12 (derecho de superficie sobre suelo público), el objeto de la compraventa es la posición contractual del superficiario (o las acciones de la sociedad superficiaria) y no la propiedad del inmueble. El Comprador debe ser Cesionario Calificado según ese contrato.
+
+X7.2 El precio se calcula como el valor presente, a la tasa indicada en los Datos del Contrato, de los flujos que la cascada asignará a los inversionistas desde el cierre hasta el fin del primer periodo. No incluye valor terminal, porque el Edificio revierte a la entidad concedente sin pago.
+
+X7.3 La transferencia no cambia la cascada ni el saldo de la entidad concedente. El Vendedor entrega al Comprador el último cálculo de saldos del fiduciario.
+
+X7.4 El Comprador verifica con su asesor si puede tener un derecho de superficie como activo elegible (por ejemplo, una FIBRA bajo la Ley 30532).
 
 ## Datos del Contrato
 

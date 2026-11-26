@@ -1,6 +1,6 @@
 # Contrato Modelo de Préstamo Mini-Perm para Vivienda en Renta
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -422,6 +422,16 @@ X6.1 Si un Prestamista está domiciliado fuera del Perú, el Prestatario aplica 
 X6.2 El Prestamista entrega al Prestatario la documentación que acredita el ingreso del dinero al país y la tasa de interés pactada, para que se aplique la tasa reducida de retención cuando corresponda.
 
 X6.3 Si el Prestamista no entrega esa documentación, el aumento del pago por retención no aplica a la diferencia entre la tasa reducida y la tasa general.
+
+**Opción X7. Préstamo sobre derecho de superficie en suelo público**
+
+X7.1 Si el Prestatario es superficiario conforme al contrato 12 (derecho de superficie sobre suelo público), la hipoteca recae sobre el derecho de superficie inscrito y no sobre el suelo. El Prestamista verifica que el derecho esté inscrito y que el plazo restante del derecho de superficie supere la Fecha de Vencimiento en al menos el número de años indicado en los Datos del Contrato.
+
+X7.2 El Prestamista acepta que el servicio de la deuda se paga con lo que la cascada del fideicomiso asigna a los inversionistas, y que la entidad concedente cobra su terreno después de los inversionistas y antes del excedente. El préstamo no tiene prelación sobre el saldo del concedente fuera de la ejecución de garantías.
+
+X7.3 El Prestamista firma con la entidad concedente un acuerdo directo (contrato 06, opción X5) que le da aviso, periodo de cura y derecho de sustitución.
+
+X7.4 Para calcular el LTV y el debt yield, el valor del Edificio es el valor del derecho de superficie por el plazo restante, sin valor terminal (contrato 11, opción X4).
 
 ## Datos del Contrato
 
