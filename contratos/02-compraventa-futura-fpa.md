@@ -214,11 +214,17 @@ Este modelo compromete hoy la compra de un edificio de vivienda en renta que tod
 
 62.3 Si la transferencia es por aporte y existen garantías sobre el Edificio, el Vendedor las levanta antes de la Fecha de Cierre con sus propios fondos.
 
+62.4 Si el Comprador es una FIBRA y la transferencia es por aporte, el Comprador conserva el Edificio por el plazo mínimo que exige la norma del régimen de FIBRA para mantener el diferimiento (cuatro años según el régimen vigente a la fecha de este modelo; las partes verifican la norma aplicable a la Fecha de Cierre). Si el Comprador vende antes y por eso el Vendedor pierde el diferimiento, el Comprador indemniza al Vendedor por el Impuesto a la Renta, los intereses y las multas que resulten.
+
+62.5 El Comprador declara que, a la firma, tiene capital comprometido o líneas aprobadas suficientes para pagar el Precio Máximo, y entrega la evidencia indicada en los Datos del Contrato.
+
 **63. Cambio tributario**
 
 63.1 Si antes de la Fecha de Cierre cambia una ley tributaria y aumenta el costo tributario de la transferencia, la parte que paga ese tributo asume el aumento.
 
 63.2 Si el aumento es mayor al porcentaje del Precio indicado en los Datos del Contrato, la parte que lo asume puede proponer una renegociación. Si las partes no llegan a un acuerdo dentro de los treinta días siguientes, esa parte puede terminar el contrato sin penalidad, devolviendo lo recibido.
+
+63.3 También se aplica 63.2 si antes de la Fecha de Cierre se exonera del IGV el arrendamiento de vivienda y, por eso, el saldo a favor de IGV del Edificio que el Comprador esperaba usar contra el IGV de las rentas deja de ser aprovechable o el IGV de la operación pasa a ser costo. El efecto se mide como el valor presente del crédito perdido, calculado por el experto financiero si las partes no se ponen de acuerdo.
 
 ## 7. Garantías de cumplimiento y arras
 
@@ -433,7 +439,7 @@ X6.2 Las rentas de esas unidades se incluyen en el cálculo del Precio solo por 
 | Dato | Valor |
 |---|---|
 | Comprador (razón social, RUC, tipo de vehículo, representantes) |  |
-| Cap Rate Pactado | 6.5% (referencial) |
+| Cap Rate Pactado | 6.5% en soles (referencial; rango de mercado estimado 6.0% a 7.0%, derivado como tasa requerida menos crecimiento de renta) |
 | Precio Mínimo y Precio Máximo |  |
 | Ocupación de cierre (tres meses previos) | 85% (referencial) |
 | Ocupación de estabilización para el cálculo del Precio | 93% (referencial) |
@@ -443,6 +449,8 @@ X6.2 Las rentas de esas unidades se incluyen en el cálculo del Precio solo por 
 | Retención del Precio (% y plazo) | 3% por 12 meses (referencial) |
 | Interés moratorio |  |
 | Aprobaciones internas o regulatorias del Comprador |  |
+| Evidencia de capital comprometido o líneas aprobadas |  |
+| Plazo mínimo de tenencia si el Comprador es FIBRA y el cierre es por aporte | 4 años (referencial; verificar norma vigente) |
 | Clasificación mínima del banco emisor de cartas fianza |  |
 | Lista de expertos financieros y técnicos |  |
 | Institución arbitral y cuantía para tribunal de tres árbitros |  |
@@ -499,6 +507,8 @@ Los valores marcados como referenciales son orientativos y no forman parte del m
 | Base imponible sin valor del terreno | Reglamento de la Ley del IGV, DS 029-94-EF, art. 5 num. 9 | Vigente en el corpus |
 | Alcabala: inafectación de la primera venta salvo terreno, comprador como contribuyente, tasa 3% de cargo del comprador | TUO Ley de Tributación Municipal, DS 156-2004-EF, arts. 22, 23 y 25 | Vigente en el corpus |
 | Aporte a FIBRA y diferimiento de la renta | Ley 30532, art. 3; DS 336-2018-EF | Vigente en el corpus |
+| Plazo mínimo de tenencia del inmueble aportado a FIBRA (cuatro años) para mantener el diferimiento | Ley 30532 y su reglamento (DS 336-2018-EF) | Verificar artículo exacto y vigencia |
+| IGV del arrendamiento de vivienda (gravado hoy; propuesta de exoneración) | TUO Ley del IGV; Proyecto de Ley 58-2026 (no aprobado a la fecha del modelo) | Verificar estado del proyecto |
 | Conformidad de obra y declaratoria de edificación | Ley 29090 y TUO DS 006-2017-VIVIENDA | Vigente en el corpus |
 | Vivienda de interés social en arrendamiento | DS 005-2025-VIVIENDA, arts. 7 y 14 | Vigente en el corpus |
 

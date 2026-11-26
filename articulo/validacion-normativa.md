@@ -1,8 +1,8 @@
 # Validación Normativa del Artículo
 
-**Financiamiento de Vivienda en Renta en el Perú: Neutralidad Competitiva e Ingeniería Financiera**
+**Vivienda en renta en Lima: qué tiene que ser cierto para que compita por el suelo**
 
-Por: Juan Germán Gayoso Arnillas · 2026-11-25 · Versión 1.0
+Por: Juan Germán Gayoso Arnillas · 2026-11-25 · Versión 2.0 (actualizada para el artículo v2.0)
 
 ## Para qué sirve este documento
 
@@ -132,3 +132,22 @@ El artículo es la pieza central de este repositorio. Los once modelos estándar
 | Datos de mercado, tasas y casos (fuentes no normativas) | Fuera del alcance de este documento. Ver la lista de fuentes del artículo |
 
 Cuando se incorporen las normas de la prioridad 1, este documento se actualiza y las partes pendientes del artículo pasan a "contrastada" o se corrigen.
+
+## 5. Normas incorporadas en la versión 2.0 del artículo
+
+La versión 2.0 del artículo cuantifica el efecto de cada norma en el modelo financiero (`modelo/`). Estas son las normas que usa y el estado de su verificación. Ninguna se contrastó contra el corpus en esta revisión; las referencias provienen de fuentes secundarias citadas en el artículo y deben confirmarse en el SPIJ o El Peruano.
+
+| Norma | Qué usa el modelo | Supuesto del modelo | Estado |
+|---|---|---|---|
+| TUO Ley del IGV (DS 055-99-EF): arrendamiento gravado | Régimen A: el IGV de la renta se absorbe (renta / 1.18) y el IGV de obra y opex se recupera solo contra el IGV de la renta | Recuperación de ~11 años | Contrastada (corpus, v1.0) |
+| TUO Ley del IGV: primera venta del constructor, base sin terreno | Venta BTS con IGV efectivo de 9% (18% × 50%) | Terreno = 50% de la base | Contrastada (corpus, v1.0) |
+| Proyecto de Ley 58-2026 (exoneración del IGV del arrendamiento de vivienda; Bono de Arrendamiento) | Régimen B: renta sin IGV; el IGV de obra y opex pasa a ser costo | Neutral frente a la persona natural; no es un beneficio neto | **Proyecto no aprobado**: verificar estado y texto final |
+| Régimen C (tasa cero con devolución) | Escenario hipotético | Devolución con 2 trimestres de rezago | **No existe norma**; solo referencia de cota superior |
+| D.Leg. 973 y DS 084-2007-EF (Recuperación Anticipada del IGV) | Devolución del IGV de obra con 2 trimestres de rezago | Requiere contrato de inversión, inversión mínima de US$ 5 millones y etapa preproductiva de al menos dos años | **Pendiente**: confirmar requisitos vigentes con MEF y ProInversión |
+| Ley 30532 y DS 336-2018-EF (FIBRA) | Salida por venta en bloque o aporte; diferimiento del IR del aporte | Plazo mínimo de tenencia de cuatro años para mantener el diferimiento; retención de 5% a personas naturales | Contrastada en lo principal (v1.0); **verificar el artículo exacto del plazo de tenencia** |
+| D.Leg. 1177 (promoción del arrendamiento para vivienda) | Contexto del riesgo de cobranza y propuesta de serie pública de rentas (RAV, FUA) | Incobrables de 1% | No disponible en el corpus: verificar |
+| Ley 32379 (Vivienda de Interés Social) y RM 269-2026-VIVIENDA (proyecto de reglamento) | Recomendación: subsidio explícito a la demanda vía Bono de Arrendamiento | No modelado | **Reglamento en consulta**: verificar versión final |
+| TUO Ley del IR (DS 179-2004-EF): tasa de 29.5%, depreciación de edificaciones | Prueba después de impuestos | Tasa de 29.5% | Verificar con tributarista |
+| TUO Ley de Tributación Municipal (DS 156-2004-EF): alcabala 3% | Costo de adquisición del terreno | 3% | Contrastada (corpus, v1.0) |
+
+**Conclusión normativa.** El resultado central del artículo (el BTR no compite por el suelo en Lima Moderna a precio de mercado con el régimen actual) depende solo de normas contrastadas: el IGV del arrendamiento y de la primera venta. Los escenarios que mejoran el BTR (régimen B, D.Leg. 973, salida a FIBRA) dependen de normas pendientes o de proyectos no aprobados, y así se presentan en el artículo.

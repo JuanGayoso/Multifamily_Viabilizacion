@@ -2,7 +2,7 @@
 
 **Documentos estándar para financiar y operar vivienda en renta (Build-to-Rent / Multifamily) en el Perú, sin subsidios y con neutralidad competitiva.**
 
-Autor: **Juan Germán Gayoso Arnillas** · Versión 1.0 · Noviembre 2026
+Autor: **Juan Germán Gayoso Arnillas** · Versión 2.0 · Noviembre 2026
 
 [![Licencia: CC BY-NC 4.0](https://img.shields.io/badge/Licencia-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
@@ -10,14 +10,20 @@ Autor: **Juan Germán Gayoso Arnillas** · Versión 1.0 · Noviembre 2026
 
 ## El artículo: elemento principal
 
-### 👉 [Financiamiento de Vivienda en Renta en el Perú: Neutralidad Competitiva e Ingeniería Financiera](articulo/financiamiento-vivienda-en-renta-peru.md)
+### 👉 [Vivienda en renta en Lima: qué tiene que ser cierto para que compita por el suelo](articulo/financiamiento-vivienda-en-renta-peru.md)
 
-El artículo sostiene que la vivienda en renta no necesita subsidios que le den ventaja sobre los proyectos de venta (Build-to-Sell) en la competencia por el suelo. Su viabilidad tiene que salir del modelo de negocio y de una buena ingeniería financiera: financiamiento puente del terreno, mini-perms, compraventas futuras con FIBRA y FIRBI, y documentación estándar que baje el costo de transacción.
+El artículo mide, con un modelo de flujo de caja publicado y datos de mercado de noviembre de 2026, si un edificio de vivienda para renta (BTR) puede pagar el precio de mercado del terreno en Lima Moderna, que fija el proyecto para venta (BTS).
+
+**Conclusión:** con el régimen tributario actual, no puede. En el caso base, la TIR no apalancada es 0.5% frente a un umbral de 9%, porque el rendimiento sobre costo (5.69%) es menor que el cap de salida (6.50%). La ingeniería financiera hace el proyecto financiable, pero no lo hace viable: todas las herramientas juntas llevan la TIR a 1.2%. El BTR compite por suelo de mercado solo si se combinan neutralidad del IGV, una prima de renta de al menos 20% demostrada y un cap de salida de 6.0% o menos. Fuera de eso, es viable en nichos donde el suelo no se paga a precio BTS (terreno aportado, joint ventures, tierra en balance).
 
 Todo lo demás en este repositorio está al servicio del artículo:
 
-- **[Validación normativa](articulo/validacion-normativa.md):** qué normas se contrastaron con el corpus, cuáles no estaban disponibles y cuáles hay que incorporar para cerrar la validación.
-- **Modelos estándar:** los documentos que hacen operable la propuesta del artículo (ver abajo).
+- **[Memoria de cálculo](articulo/memoria-de-calculo.md):** fórmulas, supuestos con fuente y resultados, para que un tercero pueda revisar cada número.
+- **[Hoja de cálculo con fórmulas](modelo/memoria-de-calculo.xlsx):** el mismo modelo en Excel, con los supuestos en una hoja editable. Reproduce el modelo en Python.
+- **[Modelo en Python](modelo/modelo_multifamily.py):** genera `modelo/resultados.json`. Ver [modelo/README.md](modelo/README.md).
+- **[Revisión de pares](articulo/revision-de-pares.md):** hallazgos por ronda, correcciones y observaciones abiertas.
+- **[Validación normativa](articulo/validacion-normativa.md):** qué normas se contrastaron, cuáles están pendientes y cómo afecta cada una al modelo.
+- **Modelos estándar:** los documentos que hacen operable la estructura cuando el proyecto ya cierra (ver abajo). Sus valores referenciales están calibrados con el modelo.
 
 ## Documentos de soporte
 
@@ -25,7 +31,10 @@ Todo lo demás en este repositorio está al servicio del artículo:
 
 | Documento | Descripción |
 |---|---|
-| [Validación normativa del artículo](articulo/validacion-normativa.md) | Normas contrastadas con el corpus, normas citadas sin texto disponible y prioridades para completar la validación |
+| [Memoria de cálculo](articulo/memoria-de-calculo.md) | Fórmulas, supuestos y resultados del modelo |
+| [Hoja Excel](modelo/memoria-de-calculo.xlsx) | Modelo con fórmulas vivas y supuestos editables |
+| [Revisión de pares](articulo/revision-de-pares.md) | Rondas de revisión, correcciones y temas abiertos |
+| [Validación normativa del artículo](articulo/validacion-normativa.md) | Normas contrastadas con el corpus, normas pendientes y su efecto en el modelo |
 
 ### Modelos estándar que viabilizan la propuesta
 

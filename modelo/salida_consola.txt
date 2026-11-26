@@ -1,0 +1,107 @@
+=== CASO BASE ===
+Precio cierre BTS S/6,115/m2 (con IGV); renta cierre BTR S/391/m2/año (con IGV si gravado)
+Terreno residual BTS (hurdle 20%): S/1,015/m2 vendible; incidencia 15.7% de ventas
+Terreno residual BTR (hurdle 14%): S/-452/m2 -> ratio -0.45
+BTS TIR equity 20.0% | TIR no apalancada 17.2%
+BTR con terreno a precio de mercado: TIR equity -5.4% | no apalancada 0.5%
+BTR NOI estab. S/256/m2/año; YoC 5.69% vs cap 6.50%
+Mini-perm: S/1,935/m2, restricción DSCR, LTV 49%, DSCR mín 1.24x, balloon 96%
+Terreno residual BTR no apalancado (r = cap + g = 9.0%): S/-195/m2 -> ratio -0.19
+  terreno al 0% del mercado (S/0/m2): TIR u 7.2%  TIR eq 4.4%  YoC 7.41%
+  terreno al 25% del mercado (S/254/m2): TIR u 5.2%  TIR eq 1.1%  YoC 6.89%
+  terreno al 50% del mercado (S/507/m2): TIR u 3.4%  TIR eq -1.4%  YoC 6.43%
+  terreno al 75% del mercado (S/761/m2): TIR u 1.9%  TIR eq -3.6%  YoC 6.04%
+  terreno al 100% del mercado (S/1,015/m2): TIR u 0.5%  TIR eq -5.4%  YoC 5.69%
+
+=== ESCENARIOS (terreno a precio de mercado BTS base salvo nota) ===
+Base: alquiler gravado, IGV absorbido (régimen A)              TIR eq  -5.4% TIR u   0.5% DSCRmin 1.24 YoC 5.69% ratio terreno -0.45
+A + recuperación anticipada IGV (D.Leg. 973)                   TIR eq  -5.0% TIR u   1.2% DSCRmin 1.24 YoC 5.69% ratio terreno -0.25
+Régimen B: alquiler exonerado (PL 58-2026)                     TIR eq  -2.4% TIR u   2.6% DSCRmin 1.24 YoC 6.00% ratio terreno -0.22
+Régimen C hipotético: tasa 0% con devolución (no neutral)      TIR eq   4.2% TIR u   6.6% DSCRmin 1.24 YoC 7.04% ratio terreno 0.30
+A + nota puente de terreno 45% al 12%                          TIR eq  -6.0% TIR u   0.5% DSCRmin 1.24 YoC 5.69% ratio terreno -0.45
+A sin mini-perm (capital cancela obra en t=14)                 TIR eq  -2.0% TIR u   0.5% DSCRmin 0.00 YoC 5.69% ratio terreno -0.53
+A con mini-perm solo interés (equivale a amortización muy larg TIR eq  -6.7% TIR u   0.5% DSCRmin 1.24 YoC 5.69% ratio terreno -0.43
+A + financiamiento verde (-75 pb obra y mini-perm, +1% CD)     TIR eq  -5.4% TIR u   0.4% DSCRmin 1.24 YoC 5.67% ratio terreno -0.44
+A + construcción industrializada (-5% CD)                      TIR eq  -4.9% TIR u   0.7% DSCRmin 1.24 YoC 5.73% ratio terreno -0.28
+A + prima operativa de renta +5%                               TIR eq  -3.0% TIR u   2.0% DSCRmin 1.24 YoC 6.06% ratio terreno -0.29
+A + cap de salida 6.00%                                        TIR eq  -2.6% TIR u   2.1% DSCRmin 1.24 YoC 5.69% ratio terreno -0.29
+A + cap de salida 7.00%                                        TIR eq  -8.1% TIR u  -1.0% DSCRmin 1.24 YoC 5.69% ratio terreno -0.58
+A + vacancia estructural 8%                                    TIR eq  -6.9% TIR u  -0.5% DSCRmin 1.24 YoC 5.45% ratio terreno -0.54
+A + opex +20%                                                  TIR eq  -7.9% TIR u  -1.0% DSCRmin 1.24 YoC 5.33% ratio terreno -0.60
+A con salida por venta de unidades a personas naturales        TIR eq   4.4% TIR u   6.4% DSCRmin 1.24 YoC 5.69% ratio terreno 0.17
+B con salida por venta de unidades a personas naturales        TIR eq   0.8% TIR u   4.4% DSCRmin 1.24 YoC 6.00% ratio terreno -0.04
+A con tenencia de 10 años (venta en t=50)                      TIR eq   2.9% TIR u   5.1% DSCRmin 1.24 YoC 5.69% ratio terreno -0.72
+B con tenencia de 10 años (venta en t=50)                      TIR eq   4.4% TIR u   6.2% DSCRmin 1.24 YoC 6.00% ratio terreno -0.51
+B + cap 6.00% + prima 5% (caso favorable)                      TIR eq   3.5% TIR u   6.1% DSCRmin 1.24 YoC 6.39% ratio terreno 0.16
+A + RERA + puente + verde + industrializada (toda la ingenierí TIR eq  -5.0% TIR u   1.2% DSCRmin 1.24 YoC 5.70% ratio terreno -0.10
+B + toda la ingeniería + cap 6.00% + prima 5%                  TIR eq   3.9% TIR u   6.2% DSCRmin 1.24 YoC 6.43% ratio terreno 0.28
+Nicho: B + prima 10% + cap 6.00% + terreno al 50%              TIR eq  11.8% TIR u  11.1% DSCRmin 1.24 YoC 7.55% ratio terreno 0.36
+Nicho: idem sin mini-perm                                      TIR eq  11.2% TIR u  11.1% DSCRmin 0.00 YoC 7.55% ratio terreno 0.25
+Nicho: A + prima 10% + cap 6.00% + terreno al 50%              TIR eq   7.1% TIR u   8.4% DSCRmin 1.24 YoC 7.28% ratio terreno 0.05
+Nicho: B + prima 10% + cap 6.00% + terreno sin costo (aporte)  TIR eq  21.2% TIR u  15.6% DSCRmin 1.24 YoC 8.51% ratio terreno 0.36
+Nicho: B + prima 20% + cap 6.00% + terreno a mercado           TIR eq  11.0% TIR u  10.7% DSCRmin 1.24 YoC 7.55% ratio terreno 0.74
+
+=== MAPA: ratio terreno BTR/BTS ===
+  ratio no apalancado 0.38 | reg A prima 0% cap 5.50%: ratio -0.10  TIR eq 0.5%
+  ratio no apalancado 0.07 | reg A prima 0% cap 6.00%: ratio -0.29  TIR eq -2.6%
+  ratio no apalancado -0.19 | reg A prima 0% cap 6.50%: ratio -0.45  TIR eq -5.4%
+  ratio no apalancado -0.41 | reg A prima 0% cap 7.00%: ratio -0.58  TIR eq -8.1%
+  ratio no apalancado -0.60 | reg A prima 0% cap 7.50%: ratio -0.70  TIR eq -10.7%
+  ratio no apalancado 0.84 | reg A prima 10% cap 5.50%: ratio 0.26  TIR eq 5.2%
+  ratio no apalancado 0.49 | reg A prima 10% cap 6.00%: ratio 0.05  TIR eq 2.2%
+  ratio no apalancado 0.19 | reg A prima 10% cap 6.50%: ratio -0.13  TIR eq -0.7%
+  ratio no apalancado -0.06 | reg A prima 10% cap 7.00%: ratio -0.29  TIR eq -3.4%
+  ratio no apalancado -0.27 | reg A prima 10% cap 7.50%: ratio -0.42  TIR eq -6.0%
+  ratio no apalancado 1.30 | reg A prima 20% cap 5.50%: ratio 0.62  TIR eq 9.6%
+  ratio no apalancado 0.91 | reg A prima 20% cap 6.00%: ratio 0.38  TIR eq 6.6%
+  ratio no apalancado 0.57 | reg A prima 20% cap 6.50%: ratio 0.18  TIR eq 3.7%
+  ratio no apalancado 0.29 | reg A prima 20% cap 7.00%: ratio 0.01  TIR eq 1.0%
+  ratio no apalancado 0.05 | reg A prima 20% cap 7.50%: ratio -0.14  TIR eq -1.6%
+  ratio no apalancado 1.77 | reg A prima 30% cap 5.50%: ratio 0.97  TIR eq 13.7%
+  ratio no apalancado 1.32 | reg A prima 30% cap 6.00%: ratio 0.71  TIR eq 10.7%
+  ratio no apalancado 0.96 | reg A prima 30% cap 6.50%: ratio 0.49  TIR eq 7.8%
+  ratio no apalancado 0.64 | reg A prima 30% cap 7.00%: ratio 0.30  TIR eq 5.1%
+  ratio no apalancado 0.38 | reg A prima 30% cap 7.50%: ratio 0.14  TIR eq 2.6%
+  ratio no apalancado 0.74 | reg B prima 0% cap 5.50%: ratio 0.19  TIR eq 4.2%
+  ratio no apalancado 0.38 | reg B prima 0% cap 6.00%: ratio -0.03  TIR eq 0.8%
+  ratio no apalancado 0.07 | reg B prima 0% cap 6.50%: ratio -0.22  TIR eq -2.4%
+  ratio no apalancado -0.19 | reg B prima 0% cap 7.00%: ratio -0.39  TIR eq -5.5%
+  ratio no apalancado -0.41 | reg B prima 0% cap 7.50%: ratio -0.53  TIR eq -8.5%
+  ratio no apalancado 1.29 | reg B prima 10% cap 5.50%: ratio 0.61  TIR eq 9.5%
+  ratio no apalancado 0.87 | reg B prima 10% cap 6.00%: ratio 0.36  TIR eq 6.1%
+  ratio no apalancado 0.52 | reg B prima 10% cap 6.50%: ratio 0.14  TIR eq 3.0%
+  ratio no apalancado 0.22 | reg B prima 10% cap 7.00%: ratio -0.04  TIR eq -0.1%
+  ratio no apalancado -0.03 | reg B prima 10% cap 7.50%: ratio -0.20  TIR eq -3.0%
+  ratio no apalancado 1.83 | reg B prima 20% cap 5.50%: ratio 1.03  TIR eq 14.3%
+  ratio no apalancado 1.36 | reg B prima 20% cap 6.00%: ratio 0.74  TIR eq 11.0%
+  ratio no apalancado 0.97 | reg B prima 20% cap 6.50%: ratio 0.51  TIR eq 7.9%
+  ratio no apalancado 0.63 | reg B prima 20% cap 7.00%: ratio 0.30  TIR eq 4.9%
+  ratio no apalancado 0.35 | reg B prima 20% cap 7.50%: ratio 0.13  TIR eq 2.1%
+  ratio no apalancado 2.37 | reg B prima 30% cap 5.50%: ratio 1.45  TIR eq 18.8%
+  ratio no apalancado 1.85 | reg B prima 30% cap 6.00%: ratio 1.13  TIR eq 15.5%
+  ratio no apalancado 1.41 | reg B prima 30% cap 6.50%: ratio 0.87  TIR eq 12.5%
+  ratio no apalancado 1.04 | reg B prima 30% cap 7.00%: ratio 0.65  TIR eq 9.6%
+  ratio no apalancado 0.73 | reg B prima 30% cap 7.50%: ratio 0.45  TIR eq 6.8%
+
+=== BTS sensibilidad ===
+{'caso': 'Base', 'land_m2': 1014.5682698333421, 'incidencia': 0.1573953769328789}
+{'caso': 'Precio -5%', 'land_m2': 832.6965633985483, 'incidencia': 0.1359796325131076}
+{'caso': 'Ventas en 16 trimestres', 'land_m2': 847.0570416095609, 'incidencia': 0.12977295592493102}
+{'caso': 'Hurdle BTS 18%', 'land_m2': 1081.153819184297, 'incidencia': 0.16772514768364155}
+{'caso': 'Hurdle BTS 22%', 'land_m2': 952.6112363531305, 'incidencia': 0.14778365248986752}
+{'caso': 'CD +10%', 'land_m2': 752.2816839470879, 'incidencia': 0.11670546253531333}
+
+Inversionista individual: {'y_bruto': 0.06386509635974305, 'y_neto': 0.04979698878000585, 'tir_10a': 0.0710984162572399}
+Después de IR: {'A': {'bts_tir_u_dir': 0.12343301411576801, 'btr_tir_u_dir': -0.0036717197548107317}, 'B': {'bts_tir_u_dir': 0.12343301411576801, 'btr_tir_u_dir': 0.018225788722729286}, 'A_unidades': {'bts_tir_u_dir': 0.12343301411576801, 'btr_tir_u_dir': 0.04008435280927114}}
+{'distrito': 'Surquillo', 'per': 14.4453125, 'regimen': 'A', 'L_m2': 977.5708134922179, 'yoc': 0.06287967369090122, 'tir_u': 0.028957178588017607, 'ratio_u': 0.09000850159509222}
+{'distrito': 'Surquillo', 'per': 14.4453125, 'regimen': 'B', 'L_m2': 977.5708134922179, 'yoc': 0.06613544054615202, 'tir_u': 0.051993115017836766, 'ratio_u': 0.4123368067569725}
+{'distrito': 'Pueblo Libre', 'per': 14.930434782608696, 'regimen': 'A', 'L_m2': 720.5358536486109, 'yoc': 0.05808569143013998, 'tir_u': 0.009518104497105995, 'ratio_u': -0.4654512229199818}
+{'distrito': 'Pueblo Libre', 'per': 14.930434782608696, 'regimen': 'B', 'L_m2': 720.5358536486109, 'yoc': 0.06075336878626574, 'tir_u': 0.029996703363928567, 'ratio_u': -0.12752215760473043}
+{'distrito': 'Lince', 'per': 14.924242424242424, 'regimen': 'A', 'L_m2': 1213.1861933488565, 'yoc': 0.06204465862751298, 'tir_u': 0.025885334327551357, 'ratio_u': 0.17990274272712273}
+{'distrito': 'Lince', 'per': 14.924242424242424, 'regimen': 'B', 'L_m2': 1213.1861933488565, 'yoc': 0.06563079732177785, 'tir_u': 0.0491797714551101, 'ratio_u': 0.4577926515877513}
+{'distrito': 'Magdalena', 'per': 16.20689655172414, 'regimen': 'A', 'L_m2': 1037.9350843645793, 'yoc': 0.05452028787363182, 'tir_u': -0.004763345422449161, 'ratio_u': -0.29174062899094105}
+{'distrito': 'Magdalena', 'per': 16.20689655172414, 'regimen': 'B', 'L_m2': 1037.9350843645793, 'yoc': 0.057541265294594995, 'tir_u': 0.015245330170587046, 'ratio_u': -0.05184280146443166}
+{'distrito': 'Jesús María', 'per': 16.688, 'regimen': 'A', 'L_m2': 1439.0654004841474, 'yoc': 0.05511789132573425, 'tir_u': -0.0014611247849695141, 'ratio_u': -0.006747223228115278}
+{'distrito': 'Jesús María', 'per': 16.688, 'regimen': 'B', 'L_m2': 1439.0654004841474, 'yoc': 0.05867394198625053, 'tir_u': 0.01988459344114557, 'ratio_u': 0.20073024824691418}
+{'distrito': 'San Miguel', 'per': 16.97, 'regimen': 'A', 'L_m2': 681.5911627632162, 'yoc': 0.048448412093167484, 'tir_u': -0.0329988593371312, 'ratio_u': -1.2087468813572664}
+{'distrito': 'San Miguel', 'per': 16.97, 'regimen': 'B', 'L_m2': 681.5911627632162, 'yoc': 0.05077150750149788, 'tir_u': -0.017255422506529117, 'ratio_u': -0.9727336350112152}

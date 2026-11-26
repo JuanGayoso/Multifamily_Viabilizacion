@@ -178,9 +178,10 @@ X3.1 El Tasador informa por separado el efecto de la certificación EDGE o equiv
 | Moneda |  |
 | Vacancia Estructural de referencia (mínimo) | 5% (referencial) |
 | Incobrables mínimos | 1% (referencial) |
-| Rango de Gastos Normalizados (% del ingreso efectivo) | 25% a 35% (referencial) |
-| Reserva de mantenimiento mayor | 2% a 3% del ingreso efectivo (referencial) |
-| Rango de referencia del Cap Rate | 6.0% a 7.5% en soles (referencial) |
+| Rango de Gastos Normalizados (% del ingreso efectivo neto de IGV, sin reserva) | 22% a 35% (referencial; edificio nuevo con servicios individuales cerca del extremo bajo; el modelo publicado usa 23.6%) |
+| Tratamiento del IGV de los gastos | Si el arrendamiento está gravado, el IGV de los gastos es crédito y no se suma; si está exonerado, el IGV de los gastos es costo y se suma a los Gastos Normalizados (referencial) |
+| Reserva de mantenimiento mayor | 2% a 3% del ingreso efectivo; se resta del Ingreso Operativo Neto (referencial) |
+| Rango de referencia del Cap Rate | 6.0% a 7.5% en soles (referencial). Valor central de 6.5% derivado como tasa requerida (6.3% de tasa soberana en soles + 2.7% de prima inmobiliaria e iliquidez) menos crecimiento de renta de 2.5%; ver `articulo/memoria-de-calculo.md` |
 | Diferencial de salida en el flujo descontado | +25 a +50 pb (referencial) |
 | Diferencia máxima entre métodos sin explicación | 10% (referencial) |
 | Utilidad del emprendedor por colocación | 10% a 15% del valor faltante (referencial) |
