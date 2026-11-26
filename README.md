@@ -8,21 +8,28 @@ Autor: **Juan Germán Gayoso Arnillas** · Versión 1.0 · Noviembre 2026
 
 ---
 
-## De qué trata
+## El artículo: elemento principal
 
-El proyecto parte de una tesis: la vivienda en renta no necesita subsidios que le den ventaja sobre los proyectos de venta (Build-to-Sell) en la competencia por el suelo. Su viabilidad tiene que salir del modelo de negocio y de una buena ingeniería financiera.
+### 👉 [Financiamiento de Vivienda en Renta en el Perú: Neutralidad Competitiva e Ingeniería Financiera](articulo/financiamiento-vivienda-en-renta-peru.md)
 
-Una parte importante de esa ingeniería es **reducir el costo de transacción**. Si cada banco, fondo, FIBRA, tasador y administrador negocia sus propios documentos, cada operación cuesta más y tarda más. Por eso este repositorio ofrece un juego completo de **modelos estandarizados**, que cualquier empresa puede adoptar sin modificar las cláusulas núcleo.
+El artículo sostiene que la vivienda en renta no necesita subsidios que le den ventaja sobre los proyectos de venta (Build-to-Sell) en la competencia por el suelo. Su viabilidad tiene que salir del modelo de negocio y de una buena ingeniería financiera: financiamiento puente del terreno, mini-perms, compraventas futuras con FIBRA y FIRBI, y documentación estándar que baje el costo de transacción.
 
-## Contenido
+Todo lo demás en este repositorio está al servicio del artículo:
 
-### Artículo
+- **[Validación normativa](articulo/validacion-normativa.md):** qué normas se contrastaron con el corpus, cuáles no estaban disponibles y cuáles hay que incorporar para cerrar la validación.
+- **Modelos estándar:** los documentos que hacen operable la propuesta del artículo (ver abajo).
+
+## Documentos de soporte
+
+### Validación
 
 | Documento | Descripción |
 |---|---|
-| [Financiamiento de Vivienda en Renta en el Perú: Neutralidad Competitiva e Ingeniería Financiera](articulo/financiamiento-vivienda-en-renta-peru.md) | Diagnóstico, tesis de neutralidad competitiva y propuesta de instrumentos financieros y documentales |
+| [Validación normativa del artículo](articulo/validacion-normativa.md) | Normas contrastadas con el corpus, normas citadas sin texto disponible y prioridades para completar la validación |
 
-### Modelos estándar
+### Modelos estándar que viabilizan la propuesta
+
+Si cada banco, fondo, FIBRA, tasador y administrador negocia sus propios documentos, cada operación cuesta más y tarda más. Estos modelos los puede adoptar cualquier empresa sin modificar las cláusulas núcleo.
 
 | # | Documento | Para qué sirve |
 |---|---|---|
