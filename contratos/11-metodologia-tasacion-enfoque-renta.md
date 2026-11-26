@@ -1,6 +1,6 @@
 # Metodología Estándar de Tasación de Edificios de Vivienda en Renta por Enfoque de Renta
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -168,6 +168,16 @@ X2.1 Para varios edificios, el Tasador aplica esta metodología a cada uno e inf
 
 X3.1 El Tasador informa por separado el efecto de la certificación EDGE o equivalente en los Gastos Normalizados y en el Cap Rate.
 
+**Opción X4. Tasación de un derecho de superficie de plazo finito**
+
+X4.1 Si el Edificio está sobre suelo público conforme al contrato 12 (derecho de superficie sobre suelo público), el Tasador valora el derecho de superficie y no la propiedad plena.
+
+X4.2 El valor es el valor presente de los flujos que corresponden al superficiario (después de la cascada) desde la fecha de tasación hasta el fin del primer periodo, descontados a la tasa de descuento de la sección 2. No se calcula valor terminal ni se capitaliza el NOI a perpetuidad, porque el Edificio revierte a la entidad concedente sin pago.
+
+X4.3 El Tasador informa por separado: (a) el valor del derecho de superficie, (b) el valor de la posición de la entidad concedente (saldo y excedente esperado) y (c) el valor estimado de la relicitación al final del primer periodo.
+
+X4.4 El valor de un plazo finito es siempre menor que el de capitalización directa. Con descuento de 9% y crecimiento de 2.5% (cap implícito de 6.5%), el factor es 1 − (1.025/1.09)^n: con 40 años restantes el valor es ~8% menor, con 20 años ~29% menor y con 10 años ~54% menor, antes del efecto de la cascada. El Tasador explica la diferencia en el informe.
+
 ## Datos de la Tasación
 
 | Dato | Valor |
@@ -178,9 +188,10 @@ X3.1 El Tasador informa por separado el efecto de la certificación EDGE o equiv
 | Moneda |  |
 | Vacancia Estructural de referencia (mínimo) | 5% (referencial) |
 | Incobrables mínimos | 1% (referencial) |
-| Rango de Gastos Normalizados (% del ingreso efectivo) | 25% a 35% (referencial) |
-| Reserva de mantenimiento mayor | 2% a 3% del ingreso efectivo (referencial) |
-| Rango de referencia del Cap Rate | 6.0% a 7.5% en soles (referencial) |
+| Rango de Gastos Normalizados (% del ingreso efectivo neto de IGV, sin reserva) | 22% a 35% (referencial; edificio nuevo con servicios individuales cerca del extremo bajo; el modelo publicado usa 23.6%) |
+| Tratamiento del IGV de los gastos | Si el arrendamiento está gravado, el IGV de los gastos es crédito y no se suma; si está exonerado, el IGV de los gastos es costo y se suma a los Gastos Normalizados (referencial) |
+| Reserva de mantenimiento mayor | 2% a 3% del ingreso efectivo; se resta del Ingreso Operativo Neto (referencial) |
+| Rango de referencia del Cap Rate | 6.0% a 7.5% en soles (referencial). Valor central de 6.5% derivado como tasa requerida (6.3% de tasa soberana en soles + 2.7% de prima inmobiliaria e iliquidez) menos crecimiento de renta de 2.5%; ver `articulo/memoria-de-calculo.md` |
 | Diferencial de salida en el flujo descontado | +25 a +50 pb (referencial) |
 | Diferencia máxima entre métodos sin explicación | 10% (referencial) |
 | Utilidad del emprendedor por colocación | 10% a 15% del valor faltante (referencial) |

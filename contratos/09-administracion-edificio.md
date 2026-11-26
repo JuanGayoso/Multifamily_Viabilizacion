@@ -1,6 +1,6 @@
 # Contrato Modelo de Administración de Edificio de Vivienda en Renta (Property Management)
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -215,6 +215,16 @@ X3.1 El Administrador presta los servicios adicionales indicados en los Datos de
 **Opción X4. Gestión de certificación ambiental**
 
 X4.1 El Administrador mide y reporta los consumos de energía y agua y mantiene la certificación EDGE o equivalente del Edificio.
+
+**Opción X5. Gestión de unidades con Bono y graduación**
+
+X5.1 Si el Edificio opera bajo el contrato 12 (derecho de superficie sobre suelo público), el Administrador gestiona la lista de espera de hogares elegibles, verifica cada año el ingreso de los hogares con Bono con la entidad que lo otorga y coordina el cobro de la parte de la Renta que paga el Bono.
+
+X5.2 El Administrador informa a cada hogar, un año antes del fin del Bono, sobre los programas de vivienda a los que puede postular y el saldo de su cuenta de ahorro.
+
+X5.3 El Administrador prepara la tabla de unidades con Bono y graduación del reporte estándar (contrato 04, opción X4).
+
+X5.4 Los indicadores de servicio incluyen el porcentaje de hogares con Bono que, al terminar el Bono, compran vivienda o siguen como inquilinos a renta de mercado sin atrasos.
 
 ## Datos del Contrato
 

@@ -1,10 +1,14 @@
 # Contrato Modelo de Financiamiento Puente de Terreno (Land Bridge Note)
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
 Este modelo financia la compra del terreno y el periodo de licencias de un proyecto de vivienda en renta, antes de que exista un crédito de construcción. Es deuda de corto plazo y de mayor riesgo que la deuda bancaria, por eso tiene tasa más alta y desembolsos atados a hitos de licenciamiento. Su función es que el desarrollador de vivienda en renta compita por el terreno en las mismas condiciones de tiempo que un desarrollador de venta, sin subsidio ni ventaja regulatoria: con un instrumento financiero que el mercado puede ofrecer.
+
+**Cuándo agrega valor.** Este instrumento resuelve un problema de plazo, no de rentabilidad. Solo mejora el retorno del capital si la TIR del proyecto supera su costo (11% a 13% en los valores referenciales). En el caso base del modelo publicado en `modelo/` (Lima Moderna, terreno a precio de mercado, IGV de la renta absorbido), la TIR no apalancada del edificio en renta es 0.5% anual, de modo que el puente reduce la TIR del capital en lugar de subirla: es apalancamiento negativo. Úselo cuando el proyecto ya cierra por otras razones (terreno aportado o bajo mercado, renta con prima demostrada, régimen de IGV neutral) y el obstáculo es solo competir en tiempo con un comprador de venta.
+
+**Suelo público.** Si el Edificio se desarrolla sobre suelo público en derecho de superficie ([contrato 12](12-derecho-de-superficie-suelo-publico.md)), este contrato no es necesario: el terreno no se compra y no hay que financiarlo.
 
 **Cómo se arma el contrato.** El contrato tiene tres partes:
 

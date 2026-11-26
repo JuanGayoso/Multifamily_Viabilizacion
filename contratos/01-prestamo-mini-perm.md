@@ -1,6 +1,6 @@
 # Contrato Modelo de Préstamo Mini-Perm para Vivienda en Renta
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -31,6 +31,7 @@ Este modelo financia un edificio de vivienda en renta terminado, desde la confor
 - **Agente** es la entidad indicada en los Datos del Contrato que administra el Préstamo por cuenta de los Prestamistas.
 - **Cuenta Recaudadora** es la cuenta del Fideicomiso donde se depositan todas las Rentas.
 - **DSCR** (ratio de cobertura del servicio de deuda) es el Ingreso Operativo Neto de los últimos doce meses dividido entre el Servicio de Deuda de esos mismos doce meses.
+- **Debt yield** (rendimiento de la deuda) es el Ingreso Operativo Neto anualizado de los últimos doce meses dividido entre el saldo del Préstamo.
 - **Edificio** es el inmueble descrito en los Datos del Contrato, con sus departamentos, estacionamientos, depósitos y áreas comunes.
 - **Fecha de Desembolso** es la fecha en que el Prestamista entrega el Préstamo al Prestatario.
 - **Fecha de Vencimiento** es la fecha indicada en los Datos del Contrato en que el Prestatario paga todo el saldo del Préstamo.
@@ -90,6 +91,7 @@ Este modelo financia un edificio de vivienda en renta terminado, desde la confor
 - la constancia de presentación al Registro de Predios de la declaratoria de edificación y de la independización de las unidades;
 - el contrato de Fideicomiso firmado, con el Edificio transferido o en proceso de transferencia al fiduciario;
 - la primera Tasación, con un LTV no mayor al indicado en los Datos del Contrato;
+- una proyección del Ingreso Operativo Neto de los doce meses siguientes, revisada por el Agente, que muestre un DSCR proyectado y un debt yield iguales o mayores a los mínimos indicados en los Datos del Contrato;
 - las pólizas de seguro del Edificio, con el Fideicomiso o el Agente como beneficiario;
 - la liquidación del crédito de construcción emitida por su acreedor, con el compromiso de levantar sus garantías al recibir el pago;
 - los poderes de los representantes del Prestatario, inscritos en el Registro de Personas Jurídicas; y
@@ -213,11 +215,11 @@ Este modelo financia un edificio de vivienda en renta terminado, desde la confor
 
 60.1 Desde el fin del Periodo de Colocación, el Prestatario mantiene un DSCR igual o mayor al DSCR mínimo indicado en los Datos del Contrato.
 
-60.2 El Prestatario mantiene en todo momento un LTV igual o menor al LTV máximo indicado en los Datos del Contrato.
+60.2 El Prestatario mantiene en todo momento un LTV igual o menor al LTV máximo y, desde el fin del Periodo de Colocación, un debt yield igual o mayor al debt yield mínimo, ambos indicados en los Datos del Contrato.
 
-60.3 El Agente calcula el DSCR cada trimestre, con la información que entrega el Prestatario.
+60.3 El Agente calcula el DSCR y el debt yield cada trimestre, con la información que entrega el Prestatario.
 
-60.4 Si el DSCR es menor al DSCR mínimo, o el LTV es mayor al LTV máximo, el Prestatario tiene sesenta días para corregirlo. Puede hacerlo aportando fondos propios a la cuenta de reserva o prepagando parte del Préstamo. Un aporte de fondos propios para corregir el DSCR se puede hacer como máximo dos veces durante la vida del Préstamo.
+60.4 Si el DSCR es menor al DSCR mínimo, el debt yield es menor al debt yield mínimo o el LTV es mayor al LTV máximo, el Prestatario tiene sesenta días para corregirlo. Puede hacerlo aportando fondos propios a la cuenta de reserva o prepagando parte del Préstamo. Un aporte de fondos propios para corregir el DSCR se puede hacer como máximo dos veces durante la vida del Préstamo.
 
 **61. Información**
 
@@ -421,6 +423,16 @@ X6.2 El Prestamista entrega al Prestatario la documentación que acredita el ing
 
 X6.3 Si el Prestamista no entrega esa documentación, el aumento del pago por retención no aplica a la diferencia entre la tasa reducida y la tasa general.
 
+**Opción X7. Préstamo sobre derecho de superficie en suelo público**
+
+X7.1 Si el Prestatario es superficiario conforme al contrato 12 (derecho de superficie sobre suelo público), la hipoteca recae sobre el derecho de superficie inscrito y no sobre el suelo. El Prestamista verifica que el derecho esté inscrito y que el plazo restante del derecho de superficie supere la Fecha de Vencimiento en al menos el número de años indicado en los Datos del Contrato.
+
+X7.2 El Prestamista acepta que el servicio de la deuda se paga con lo que la cascada del fideicomiso asigna a los inversionistas, y que la entidad concedente cobra su terreno después de los inversionistas y antes del excedente. El préstamo no tiene prelación sobre el saldo del concedente fuera de la ejecución de garantías.
+
+X7.3 El Prestamista firma con la entidad concedente un acuerdo directo (contrato 06, opción X5) que le da aviso, periodo de cura y derecho de sustitución.
+
+X7.4 Para calcular el LTV y el debt yield, el valor del Edificio es el valor del derecho de superficie por el plazo restante, sin valor terminal (contrato 11, opción X4).
+
 ## Datos del Contrato
 
 ### Parte Uno: datos que llena el Prestamista
@@ -433,15 +445,16 @@ X6.3 Si el Prestamista no entrega esa documentación, el aumento del pago por re
 | Tramos: monto, moneda, tasa, plazo y Prestamistas de cada tramo |  |
 | Tasa de interés (fija / variable: referencia + margen / VAC + margen) |  |
 | Interés moratorio |  |
-| Periodo de Colocación (meses) | 24 (referencial) |
+| Periodo de Colocación (meses) | 12 a 18 (referencial) |
 | Plazo total y Fecha de Vencimiento | 5 a 7 años (referencial) |
-| Plazo de amortización de referencia | 25 a 30 años (referencial) |
-| Balloon estimado al vencimiento (% del principal) |  |
+| Plazo de amortización de referencia | 15 a 20 años o perfil esculpido (referencial) |
+| Balloon estimado al vencimiento (% del principal) | 89% a 96% con 5 años de plazo (referencial; ver nota) |
 | Ocupación mínima al fin del Periodo de Colocación | 85% (referencial) |
 | Plazo de extensión del Periodo de Colocación y depósito adicional |  |
-| DSCR mínimo | 1.20x (referencial) |
-| DSCR de distribución | 1.30x (referencial) |
-| LTV máximo | 65% (referencial) |
+| DSCR mínimo | 1.25x (referencial) |
+| DSCR de distribución | 1.35x (referencial) |
+| LTV máximo | 55% (referencial) |
+| Debt yield mínimo | 9.5% (referencial) |
 | Saldo mínimo de la reserva del Servicio de Deuda | 6 meses (referencial) |
 | Saldo mínimo de la reserva de mantenimiento mayor |  |
 | Cobertura de tasa: % del Préstamo, plazo y clasificación mínima de la contraparte | 50-70% (referencial) |
@@ -456,6 +469,9 @@ X6.3 Si el Prestamista no entrega esa documentación, el aumento del pago por re
 | Institución arbitral y cuantía para tribunal de tres árbitros |  |
 | Opciones secundarias elegidas y sus datos |  |
 | Direcciones y correos para comunicaciones |  |
+
+
+**Nota de calibración de los valores referenciales.** Los valores de esta tabla salen del modelo publicado en `modelo/` (ver `articulo/memoria-de-calculo.md`). Con un yield on cost de 5.7%, cap rate de tasación de 6.5% y tasa de 9% en soles, el límite que manda es el DSCR de 1.25x, no el LTV: el préstamo máximo equivale a un LTV de ~49%. Fijar un LTV máximo de 65% no da más deuda; solo crea una expectativa que el banco no cumplirá. Por eso el crédito de construcción debe dimensionarse contra el monto que este préstamo puede repagar (en el caso base, LTC de ~55% y no de 65%); si no, al refinanciar el promotor tiene que aportar la diferencia (S/ 619 por m² en el caso base). Con amortización de 20 años y plazo de 5 años, el saldo al vencimiento queda entre 89% y 96% del principal: el riesgo de refinanciamiento sigue siendo del Prestatario.
 
 ### Parte Dos: datos que llena el Prestatario
 

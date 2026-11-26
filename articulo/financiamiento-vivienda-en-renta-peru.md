@@ -1,316 +1,380 @@
-# Financiamiento de Vivienda en Renta en el Perú: Neutralidad Competitiva e Ingeniería Financiera
+# Vivienda en renta en Lima: dónde y bajo qué condiciones es viable hoy
 
-Por: Juan Germán Gayoso Arnillas · 2026-11-25
+**Un primer esbozo de viabilidad de mercado: producto, estrato, neutralidad tributaria y costo de capital, medidos con datos**
 
-## 1. Introducción: neutralidad antes que subsidio
+Por: Juan Germán Gayoso Arnillas · Versión 2.1 · 26 de noviembre de 2026
 
-La industria inmobiliaria peruana llega a mediados de la década de 2020 en una encrucijada. Tras veinte años dominados por el modelo de "Construir para Vender" (Build-to-Sell o BTS), el mercado muestra saturación en los segmentos de venta tradicional y un déficit habitacional que el crédito hipotecario convencional no logra cerrar. En ese contexto, el modelo de "Construir para Rentar" (Build-to-Rent o BTR) y los activos residenciales institucionales (Multifamily) aparecen como una pieza necesaria del desarrollo urbano y de la profundización del mercado de capitales.
+Primero de dos artículos. Este mide cuándo el multifamily funciona **en el mercado**, sin ayuda del Estado. El segundo, [*¿Puede la vivienda en renta ayudar a cerrar la brecha de vivienda en Lima y Callao?*](btr-y-brecha-de-vivienda-lima-callao.md), pregunta si puede contribuir a la vivienda de la brecha y bajo qué modelo de negocio.
 
-La barrera es el costo de capital. En 2024 y 2025 el desarrollador opera con "apalancamiento negativo": el costo de la deuda bancaria supera el rendimiento operativo corriente (Cap Rate) del activo estabilizado. La respuesta habitual del sector ha sido pedir al Estado depreciación acelerada, exoneraciones del Impuesto a la Renta o devoluciones anticipadas del IGV.
+Modelo reproducible: [`modelo/modelo_multifamily.py`](../modelo/modelo_multifamily.py) · Hoja de cálculo con fórmulas: [`modelo/memoria-de-calculo.xlsx`](../modelo/memoria-de-calculo.xlsx) · Memoria de cálculo: [`memoria-de-calculo.md`](memoria-de-calculo.md) · Revisión de pares: [`revision-de-pares.md`](revision-de-pares.md)
 
-Este artículo parte de un principio distinto: la **neutralidad competitiva entre vehículos de tenencia**. En el Perú ya existe un enorme parque de vivienda en alquiler, solo que en manos de personas naturales que compran departamentos en proyectos de venta tradicional como activo de renta. El multifamily institucional compite con ese modelo por el mismo suelo y por los mismos inquilinos. Si el Estado le diera una ventaja fiscal que el inversionista individual no tiene, el multifamily podría pagar más por la tierra gracias al subsidio y no por ser más eficiente. Eso sería competencia desleal hacia el modelo de venta, transferiría recursos públicos al sector y encarecería el suelo para todos.
+---
 
-Por eso la viabilidad del multifamily no debe depender de un subsidio, sino de un modelo de negocio bien armado. Planteamos dos cosas:
+## Conclusión
 
-1. **Nivelar la cancha, no inclinarla.** Hoy el sistema tributario no es neutral, y la inclinación juega en contra del multifamily. Las medidas que corrigen esa brecha son defendibles; las que crean una ventaja nueva, no.
-2. **Resolver el costo de capital con ingeniería financiera.** Una "Suite de Financiamiento de Ciclo de Vida" (deuda privada para el suelo, crédito sindicado para la construcción, préstamo mini-perm para la estabilización y salida hacia FIBRAs) puede alinear riesgos y plazos y reducir el Costo Promedio Ponderado de Capital (WACC) sin privilegios fiscales.
+**Dónde encaja hoy.** El multifamily de mercado en Lima es un producto de nicho, y el modelo explica por qué:
 
-El texto recorre el diagnóstico, la comparación tributaria entre ambos modelos, cada fase del ciclo inmobiliario y la dimensión urbana, para que esta ingeniería financiera densifique la ciudad sin alimentar la especulación con el suelo.
+- **Producto:** departamentos de 40 a 60 m², amoblados, con amenities y gestión profesional.
+- **Estrato:** inquilinos de ingresos medios-altos, con alquileres de S/ 2,400 a S/ 3,000 al mes.
+- **Ubicación:** Lima Top y la parte más cara de Lima Moderna.
 
-## 2. Diagnóstico: la trampa del costo de capital
+Ahí logra la prima de renta que necesita para pagar el terreno. Es lo que han hecho los edificios ya lanzados: LiveSpace La Mar, Av. Ricardo Palma 251 y los proyectos de Miraflores y San Isidro (sección 8.1). Fuera de ese nicho, en el producto promedio, el modelo no cierra:
 
-La inviabilidad actual del modelo de renta no es un problema de demanda, que es sólida y creciente, sino de la oferta de capital: cómo se financia hoy un activo de larga maduración.
+Con precios, alquileres, tasas y normas vigentes a noviembre de 2026, un edificio de vivienda para renta (*build-to-rent*, BTR) en Lima Moderna **no puede pagar el precio de mercado del terreno**, que fija el proyecto de vivienda para venta (*build-to-sell*, BTS). Hay que distinguir dos cosas:
 
-### 2.1. Tasas de interés y curva soberana (2024-2025)
+- **La ingeniería financiera es necesaria para que un proyecto sea financiable, pero no basta para hacerlo viable.** Nota puente de terreno, mini-perm, financiamiento verde y recuperación anticipada del IGV, todas juntas, suben la TIR no apalancada del caso base de 0.5% a 1.2%. El umbral exigible es 9%.
+- **Cuatro variables deciden la viabilidad:**
+  1. el régimen de IGV del alquiler;
+  2. el cap rate al que compra el inversionista institucional;
+  3. la prima de renta que el producto logra demostrar;
+  4. el costo del suelo.
 
-El costo de capital de cualquier proyecto privado se construye sobre la tasa libre de riesgo, representada por los Bonos Soberanos. Hacia fines de 2024 el BCRP mantuvo una política monetaria prudente; con la inflación de vuelta en el rango meta, el bono a 10 años (Soberanos 2034/2037) rinde aproximadamente entre 6.8% y 7.2%. Ningún banco prestará a un privado por debajo de ese piso sin mitigantes excepcionales, y a él se suman el spread corporativo y el costo de fondeo bancario.
+  El BTR compite por suelo de mercado solo cuando se combinan neutralidad del IGV (alquiler exonerado, como el de la persona natural), una prima de renta de al menos 20% bien sustentada y un cap de salida de 6.0% o menos. Fuera de eso, es viable en nichos donde el suelo no se paga a precio BTS: aporte de terreno por un propietario patrimonial, joint ventures o tierra que ya está en balance.
 
-En el segmento corporativo inmobiliario, las tasas activas de mediano plazo (1 a 5 años) se ubican, según la SBS y reportes de mercado, entre 9.0% y 11.0% para empresas grandes, y pueden superar el 12% para medianas.
+En el caso base el edificio vale menos de lo que cuesta. Su rendimiento sobre costo (5.69%) está por debajo del cap rate de salida (6.50%). Ninguna estructura de deuda corrige un margen de desarrollo negativo: con deuda más cara que el rendimiento del activo, el apalancamiento empeora la TIR del capital.
 
-### 2.2. Cap Rate frente al retorno exigido: dónde está realmente la brecha
+Este es un primer esbozo. Mide un proyecto tipo con datos de oferta, y la prima de renta, que es la variable decisiva, todavía no tiene una serie pública. Por eso debe leerse como un mapa de condiciones y no como un veredicto sobre cada terreno.
 
-En mercados maduros como Estados Unidos o Alemania el Cap Rate (ingreso operativo neto anual entre valor del activo) suele superar el costo de la deuda comercial, lo que produce apalancamiento positivo. En Lima ocurre lo contrario: los precios en Lima Top y Lima Moderna se han mantenido resilientes y comprimen los Cap Rates.
+La tesis de la neutralidad competitiva sigue en pie: el Estado no debe darle al multifamily ventajas que el arrendador persona natural no tiene. El modelo muestra que hoy la cancha está inclinada *en contra* del multifamily, sobre todo por el IGV, y que nivelarla es condición necesaria pero no suficiente.
 
-| Indicador | Rango estimado (Lima, 2024-2025) | Fuente / racional |
+---
+
+## 1. La pregunta correcta: quién puede pagar el terreno
+
+Un proyecto de vivienda en renta no compite contra "nada", sino contra el mejor uso alternativo del mismo terreno. En Lima Moderna ese uso es el edificio para venta, cuyos departamentos compran familias y pequeños inversionistas que luego los alquilan. El terreno se lo lleva quien puede pagar más por él. Por eso el criterio de viabilidad de este artículo es el **valor residual del suelo**: cuánto puede pagar cada modelo por el terreno y aun así darle a su capital la rentabilidad que exige.
+
+- **BTS:** el residual se calcula con la TIR que exige el promotor (20% en soles, rango de mercado de 18% a 25%). Ese residual es el **precio de mercado del terreno**.
+- **BTR:** se calcula con dos varas.
+  - **Vara laxa:** TIR no apalancada igual al cap rate más el crecimiento de la renta (9.0%). Es el retorno de un activo ya estabilizado; no premia el riesgo de construcción ni de colocación, así que es un **límite superior**.
+  - **Vara estricta:** TIR del capital de 14% (rango de 12% a 16%).
+
+Si el BTR no alcanza el residual del BTS ni siquiera con la vara laxa, no puede comprar terreno de mercado.
+
+## 2. Los datos de partida
+
+**Tabla 1. Datos de mercado** (hechos verificables, salvo donde se indica).
+
+| Variable | Valor | Fecha | Fuente |
+|---|---|---|---|
+| Precio de oferta de departamentos, Lima Moderna (6 distritos) | US$ 1,868 por m² | IV trim. 2025 | BCRP, Nota de Estudios 16-2026 (medianas Urbania) |
+| Alquiler de oferta, Lima Moderna (promedio simple de los 6 distritos) | US$ 119.3 por m² al año | IV trim. 2025 | BCRP, Nota de Estudios 16-2026 |
+| Relación precio/alquiler (PER) | 15.6 en Lima Moderna; 16.3 en 12 distritos; 16.1 al II trim. 2026 | 2025-2026 | BCRP |
+| Rentabilidad bruta del alquiler, Lima | 5.27% (oct-2025); 5.44% (2026) | 2025-2026 | Urbania Index; Gestión |
+| Tasa de referencia BCRP | 4.50% (subió desde 4.25%) | 12-nov-2026 | BCRP; Andina |
+| Inflación de Lima, 12 meses | 5.3% | oct-2026 | BCRP; Panamericana |
+| Expectativa de inflación a 12 meses | 3.1% | nov-2026 | BBVA Research |
+| Bono soberano SB12AGO34 (≈8 años) | 6.35% | 30-set-2026 | MEF, reporte diario |
+| Bono soberano SB12AGO37 | ≈7.0% | 30-set-2026 | MEF, reporte diario |
+| Tasa hipotecaria promedio en soles | 7.5%-7.8% | ene-ago 2026 | BCRP vía Andina; SBS |
+| Tipo de cambio | S/ 3.40-3.41 por US$ | nov-2026 | BCRP |
+| FIBRA Prime: ocupación y activos | 95.3%; US$ 274.6 millones; 40 inmuebles (sin vivienda) | II trim. 2026 | Revista Economía; Infomercado |
+| Renta residencial directa en Chile | 3.5%-4.5% neto en UF (real) | jul-2026 | ACAFI, citada por Mercado Libre Chile (fuente secundaria) |
+
+Dos precisiones sobre estos datos:
+
+- **Precio y alquiler son de oferta, no de cierre.** El modelo les aplica el mismo descuento de 4% para no sesgar la comparación.
+- **El 6.4% de rentabilidad bruta que sale del BCRP para Lima Moderna es más alto que lo que reporta Urbania.** Urbania da 5.3%-5.4% para Lima, y por distrito de Lima Moderna, entre 5.1% (Magdalena) y 5.9% (Pueblo Libre, San Miguel) a mayo de 2026. Usar el dato del BCRP *favorece* al modelo de renta. Es una elección deliberada: si el BTR no cierra con el dato favorable, tampoco cierra con el otro.
+
+## 3. El modelo
+
+Se modela un mismo edificio de 5,500 m² vendibles (unos 100 departamentos de 55 m²) desarrollado de dos maneras. Los flujos son trimestrales, en soles nominales; el IGV se trata como flujo de caja, con débito, crédito y saldo a favor. El análisis principal es antes de Impuesto a la Renta, y en la sección 9 se contrasta después de IR.
+
+**Tabla 2. Supuestos principales** (H = hecho con fuente; E = estimación; O = opinión profesional).
+
+| Supuesto | Base | Tipo | Sustento |
+|---|---|---|---|
+| Precio de cierre BTS | S/ 6,115 por m² (con IGV) | H+E | US$ 1,868 × 3.41 × (1 − 4%) |
+| Renta de cierre BTR | S/ 391 por m² al año | H+E | US$ 119.3 × 3.41 × (1 − 4%) |
+| Crecimiento de precios y rentas | 2.5% anual | E | Inflación de largo plazo, sin crecimiento real |
+| Costo directo | S/ 2,665 por m² vendible (sin IGV) | E | S/ 2,050 por m² techado × 1.30 |
+| Indirectos / contingencia | 12% / 5% del costo directo | E | Práctica de mercado |
+| Gastos de venta BTS | 4% de la venta neta | E | Práctica de mercado |
+| Amoblado y amenities BTR | S/ 150 por m² | E | |
+| Calendario | Licencias t1-t3; obra t4-t10; entrega t11 | E | 21 meses de obra |
+| Ventas BTS | t3-t14; 20% de inicial y saldo a la entrega | E | |
+| Ocupación BTR | 25%, 50%, 75% y 90% en t11-t14; 95% estabilizada | E | Vacancia estructural de 5% |
+| Opex del propietario | S/ 72 por m² al año (≈21% del ingreso neto) + reserva de 2% | E | Desglose en la memoria |
+| Crédito de obra | 10.0% TEA; 65% LTC en BTS y 55% en BTR | E | Soberano + ≈370 pb |
+| Mini-perm | 9.0% TEA; amortización a 20 años; DSCR 1.25x; LTV 60%; debt yield 9.5% | E | |
+| Cap rate de salida | 6.50% sobre NOI | E/O | Soberano ≈6.3% + prima ≈2.7% − crecimiento 2.5% |
+| Venta BTR | t22 (dos años después de estabilizar) | E | |
+| TIR exigida al capital | BTS 20%; BTR 14% | O | |
+
+**Cómo se llega al cap de 6.5%.** Por el modelo de Gordon, el cap es el retorno exigido menos el crecimiento: (6.3% + 2.7%) − 2.5% = 6.5%. En términos reales equivale a cerca de 4%, similar a la renta residencial neta de Chile (3.5%-4.5% en UF) pese a que la tasa real soberana del Perú es más alta (los bonos VAC de 2035-2040 rendían entre 3.8% y 4.3% reales en septiembre de 2026, según el reporte diario del MEF). Pedir un cap menor en Lima supone un mercado institucional más profundo que el chileno, y ese mercado no existe todavía.
+
+## 4. Resultado base
+
+**Tabla 3. Resultado base, terreno a precio de mercado** (soles; valores por m² vendible).
+
+| Indicador | BTS | BTR |
 |---|---|---|
-| Cap Rate residencial, Lima Top | 4.8% - 5.5% | Datos de mercado, Urbania, BCRP |
-| Cap Rate residencial, Lima Moderna | 5.8% - 6.5% | Zonas de mayor densidad y rotación |
-| Deuda bancaria de construcción | 9.5% - 11.5% | Crédito promotor, tasa activa en soles |
-| Deuda mezzanine / fondos privados | 13.0% - 16.0% | Fondos de deuda privada |
-| WACC del desarrollador (60% deuda / 40% equity) | 12.0% - 14.0% | Equity exigiendo más de 18% |
-| Spread de apalancamiento (Cap Rate menos costo de deuda) | -4.0% a -5.0% | Destrucción de valor en el año 1 |
+| Terreno residual a la TIR exigida | **S/ 1,015 por m²** (15.7% de las ventas) | −S/ 452 por m² (capital al 14%); −S/ 195 por m² (no apalancado al 9%) |
+| Costo de desarrollo sin terreno | S/ 3,280 por m² + S/ 237 de ventas | S/ 3,463 por m² + S/ 611 de IGV (crédito) |
+| NOI estabilizado | — | S/ 256 por m² al año |
+| Rendimiento sobre costo (YoC) | — | 5.69% |
+| Valor a la salida (NOI/cap) | — | S/ 4,132 por m² frente a S/ 4,508 de costo con terreno |
+| TIR no apalancada | 17.2% | **0.5%** |
+| TIR del capital | 20.0% | **−5.4%** |
+| Mini-perm | — | S/ 1,935 por m²; LTV 49%; DSCR mínimo 1.24x; restricción: DSCR |
 
-Ahora bien, comparar el Cap Rate con el WACC exige cuidado, por tres razones:
+**Calibración.** El residual del BTS (S/ 1,015 por m² vendible, unos US$ 300) equivale al 15.7% de las ventas, con un margen de 22% sobre ventas. Ambas cifras caen dentro de los rangos que se ven en la práctica de Lima Moderna: 12%-20% de incidencia y 15%-25% de margen. La incidencia es opinión profesional y debe contrastarse con transacciones (ver "Datos a verificar").
 
-- **El Cap Rate es un rendimiento corriente; el WACC, un retorno total.** En equilibrio, el Cap Rate se aproxima al retorno exigido menos el crecimiento esperado del ingreso neto. Si los alquileres se ajustan al menos por inflación, un Cap Rate de 6% es compatible con un retorno total de 8.5% a 9%. Esa apreciación no es especulativa: es indexación de rentas.
-- **La deuda en soles es nominal y el Cap Rate se acerca a un rendimiento real.** Parte del "spread negativo" es solo esa diferencia de unidades.
-- **El problema real está en el año 1 y en la estructura de plazos.** Aunque el retorno total cierre, una deuda al 10% con amortización corta no puede pagarse con una renta que rinde 6% el primer año. El proyecto puede crear valor y aun así quedarse sin caja.
+### 4.1 De la renta al NOI: dónde se va el ingreso
 
-La conclusión no es que el multifamily solo funcione con una plusvalía agresiva. Funciona si (i) se capta el margen de desarrollo, es decir, la diferencia entre el rendimiento sobre costo y el Cap Rate de salida que se verá en la sección 7, y (ii) la deuda se estructura con plazos y perfiles de pago que calcen con cómo madura la renta. Ese es el objeto de la ingeniería financiera que se propone.
+**Tabla 4. Cascada del ingreso BTR, régimen tributario vigente** (S/ por m² al año, estabilizado, t15-t18).
 
-### 2.3. Por qué el capital es caro: imperfecciones de mercado, no falta de subsidio
-
-Una renta privada por debajo del costo de oportunidad podría leerse como una externalidad positiva que el privado no captura, lo que justificaría un subsidio. La lectura más plausible es otra: hay imperfecciones en el mercado de capitales que elevan el WACC.
-
-- **Poca competencia en el financiamiento de largo plazo en soles.** La banca comercial concentra la originación y fondea con depósitos de corto plazo.
-- **Asimetría de información.** No existen series públicas de desempeño del modelo de renta en el Perú (ocupación, morosidad, rotación). Sin historial, el banco califica el proyecto como especulativo y le asigna la mayor prima de riesgo.
-- **La competencia por el suelo.** El terreno lo fija el comprador que más paga, que hoy es el modelo de venta. Si ese modelo goza de un tratamiento tributario más liviano (sección 3), puede pagar más por la tierra y comprimir los Cap Rates de toda la zona.
-
-La solución eficiente no es subsidiar el Cap Rate, lo que desvía recursos públicos al sector inmobiliario, sino introducir más competencia y más información en el financiamiento. Sindicar el riesgo, incorporar aseguradoras y fondos frente a la banca y hacer transables los instrumentos, con reportes estandarizados, es un resultado en el que ganan todos.
-
-### 2.4. La ineficiencia del crédito promotor
-
-El sistema financiero peruano perfeccionó el crédito promotor para el modelo de venta: corto plazo (18 a 36 meses), desembolsos contra avance de obra y repago con las hipotecas de los compradores. El banco mitiga su riesgo exigiendo preventas, usualmente más de 30%. Para un proyecto BTR este instrumento no sirve, por tres razones:
-
-1. **No hay preventas.** No hay cuotas iniciales ni desembolsos hipotecarios que amorticen el principal durante la obra.
-2. **El plazo de repago no calza.** El banco exige el capital al terminar la obra (mes 24 a 36), cuando el edificio solo genera renta suficiente para pagar intereses.
-3. **La evaluación de riesgo lo castiga.** Sin preventas, el proyecto se califica como especulativo y recibe la tasa más alta.
-
-Usar herramientas de venta para proyectos de renta es como intentar encajar una clavija cuadrada en un agujero redondo. La solución no es lubricar la clavija con incentivos tributarios, sino rediseñar la herramienta.
-
-## 3. La cancha tributaria hoy: ¿a quién favorece?
-
-Antes de discutir incentivos hay que medir el punto de partida. La comparación relevante no es multifamily frente a nada, sino multifamily frente a su competidor real: la persona natural que compra un departamento en un proyecto de venta para alquilarlo.
-
-| Concepto | Persona natural que compra para alquilar | Multifamily (empresa) |
+| Concepto | S/ por m² | % de la renta potencial |
 |---|---|---|
-| IGV sobre el alquiler | No gravado: es renta de primera categoría (TUO de la Ley del IGV, art. 2 a) | Gravado con 18%: es un servicio que genera renta de tercera categoría (art. 3 c) |
-| Impuesto a la Renta sobre el alquiler | 6.25% sobre la renta neta (TUO de la Ley del Impuesto a la Renta, art. 52-A); como la renta neta es el 80% del alquiler, equivale a 5% del bruto | 29.5% sobre la utilidad, más 5% al distribuir dividendos (art. 52-A, último párrafo) |
-| IGV de la construcción | Pagado una vez, dentro del precio de compra (primera venta del constructor, TUO de la Ley del IGV, art. 1 d) | Crédito fiscal que se recupera lentamente contra el IGV de los alquileres |
-| Intereses de la deuda | No los deduce, pero tampoco enfrenta límites (su renta neta es una fórmula fija) | Deducción limitada al 30% del EBITDA tributario (art. 37 a de la Ley del Impuesto a la Renta; Informe SUNAT 064-2024) |
+| Renta potencial a precio de mercado | 432 | 100% |
+| (−) Vacancia (5%) e incobrables (1%) | −26 | −6% |
+| Renta cobrada al inquilino | 407 | 94% |
+| (−) IGV absorbido (18% dentro del precio de mercado) | −62 | −14% |
+| Ingreso neto del propietario | 345 | 80% |
+| (−) Opex del propietario | −81 | −19% |
+| (−) Reserva de reposición | −7 | −2% |
+| **NOI** | **256** | **59%** |
 
-La diferencia más nítida es el IGV. Una familia que alquila a un propietario individual no paga IGV; si alquila el mismo departamento en un multifamily, paga 18% más, o el operador lo absorbe en su margen. En el Impuesto a la Renta la comparación depende de los márgenes, porque la empresa deduce costos reales y la persona natural no. A eso se suma, como factor práctico, la informalidad de muchos arrendadores individuales, que agranda la brecha.
+La partida más grande después del opex es el IGV. El inquilino compara el precio del multifamily con el de un departamento que alquila una persona natural, que no cobra IGV. Para competir, el operador tiene que absorber el impuesto dentro del precio de mercado. Trasladarlo (cobrar 18% más) equivale a lo mismo, con más vacancia.
 
-En otras palabras: hoy, en la pugna por los terrenos, el modelo de venta puede ofertar con flujos que soportan una menor carga tributaria. El riesgo de competencia desleal ya existe, pero en sentido inverso al que suele temerse.
+## 5. Por qué la persona natural paga más que el institucional
 
-### 3.1. El test de neutralidad
+El precio del departamento lo fija un comprador que exige poco. Una persona natural que compra en Lima Moderna para alquilar obtiene:
 
-De ahí se desprende un criterio simple para evaluar cualquier medida: **¿cierra una brecha frente al inversionista individual o abre una ventaja nueva?**
+**Tabla 5. Rendimiento del arrendador persona natural** (por m², supuestos en la hoja "Individual").
 
-| Medida | Efecto | Veredicto |
+| Indicador | Valor |
+|---|---|
+| Rendimiento bruto (renta / precio con IGV) | 6.39% |
+| Rendimiento neto de vacancia (8%), corretaje, predial, mantenimiento vacío e IR (5% del bruto) | **4.98%** |
+| TIR a 10 años con apreciación de 2.5% anual | **7.1%** |
+
+El institucional exige 9.0% sin deuda (cap de 6.5% + 2.5%). La distancia, de unos 190 pb de retorno exigido, es el problema de fondo: **la vivienda se valoriza en el mercado como depósito de valor familiar, no como activo de renta institucional**. El BTS vende a ese comprador y traslada al terreno el bajo retorno que este exige. El BTR, que vende a un institucional, no puede hacerlo.
+
+En nuestra opinión profesional, esa brecha no es una "falla de mercado" que se cierre con un subsidio. Refleja preferencias (el valor de ser propietario, la falta de alternativas de ahorro) y diferencias tributarias (sección 6). La política pública puede corregir lo segundo; lo primero, no le corresponde.
+
+## 6. La cancha tributaria: dónde está inclinada y cuánto cuesta nivelarla
+
+La comparación relevante es entre la empresa que alquila y la persona natural que alquila.
+
+**Tabla 6. Tratamiento tributario comparado** (normas vigentes; ver [validación normativa](validacion-normativa.md)).
+
+| Concepto | Persona natural | Empresa (multifamily) |
 |---|---|---|
-| Retención definitiva de 5% sobre las rentas que la FIBRA atribuye a personas naturales (Ley 30532, art. 4) | Iguala casi exactamente el 5% efectivo de la persona natural | Neutral: defendible |
-| Recuperación anticipada del IGV (D. Leg. 973) | Adelanta un crédito que el modelo de venta recupera de inmediato; no reduce el impuesto | Corrige el calendario: defendible |
-| Tratamiento del IGV en el alquiler de vivienda por empresas | Eliminaría la brecha del 18% frente al arrendador individual | Nivela, pero tiene costo fiscal: debate de política tributaria |
-| Depreciación acelerada exclusiva para el modelo de renta | Ventaja que el inversionista individual no tiene | Rompe la neutralidad |
-| Exoneración del Impuesto a la Renta para el multifamily | Ventaja directa en la pugna por el suelo | Rompe la neutralidad |
-| Subsidio al alquiler o crédito en condiciones preferentes solo para el multifamily | Ventaja financiada con recursos públicos o de mandato público | Rompe la neutralidad, salvo que el modelo de venta acceda en igualdad de condiciones |
+| IGV sobre el alquiler | No gravado (renta de primera categoría) | Gravado con 18% (TUO Ley del IGV) |
+| IGV de la construcción | Pagado una vez, dentro del precio (primera venta: base sin terreno, ≈9% efectivo) | Crédito fiscal que se recupera solo contra el IGV de los alquileres: en el caso base se recupera 22% en los primeros tres años de operación y tomaría unos 11 años recuperarlo todo |
+| Impuesto a la Renta | 6.25% sobre el 80% de la renta = 5% del bruto (art. 52-A LIR) | 29.5% sobre la utilidad, más 5% al distribuir; depreciación de 5% anual |
+| Impuesto predial | Tramos bajos (0.2% hasta 15 UIT de autoavalúo) | Edificio completo en el tramo de 1.0% |
+| Vehículo de salida (FIBRA, Ley 30532) | — | Retención de 5% para personas naturales con menos de 20% de los certificados: neutral frente a la persona natural |
 
-La depreciación acelerada no es una hipótesis: la tasa general para edificios es 5% anual (art. 39 de la Ley del Impuesto a la Renta), y el D. Leg. 1488 ya creó en 2020 un régimen especial temporal. Bajo este principio, lo que corresponde pedir no es un privilegio para el multifamily, sino que el sistema trate igual a quien ofrece vivienda en alquiler, sea una persona o una empresa. El resto debe resolverlo el propio modelo de negocio.
+Tres regímenes de IGV para el alquiler de vivienda por empresas, medidos en el modelo:
 
-## 4. Fase I: suelo y deuda privada
+**Tabla 7. Efecto del régimen de IGV en el BTR** (terreno a precio de mercado).
 
-La adquisición del suelo y la obtención de licencias es la fase de mayor riesgo y la menos atendida por la banca tradicional, que en la práctica rara vez financia terrenos sin licencia ni proyecto aprobado.
+| Régimen | YoC | TIR no apalancada | ¿Neutral frente a la persona natural? |
+|---|---|---|---|
+| A. Vigente: alquiler gravado, IGV absorbido | 5.69% | 0.5% | No: castiga al multifamily |
+| A + recuperación anticipada del IGV de obra (D.Leg. 973) | 5.69% | 1.2% | Corrige el calendario, no la carga |
+| B. Alquiler exonerado, sin crédito fiscal (la lógica del PL 58-2026) | 6.00% | 2.6% | **Sí**: el IGV de la obra queda como costo, igual que para la persona natural |
+| C. Tasa 0% con devolución del IGV de obra (hipotético) | 7.04% | 6.6% | No: le da al multifamily una ventaja que la persona natural no tiene |
 
-### 4.1. El costo del equity puro en la compra de tierra
+El hallazgo menos intuitivo es que **la exoneración no es gratuita para el operador**. Al exonerar el alquiler se pierde el crédito fiscal de la obra, que pasa a ser costo. Aun así, el régimen B mejora el resultado frente al A (YoC de 6.00% contra 5.69%), porque el IGV que se deja de absorber sobre las rentas pesa más que el crédito que se pierde. Por eso el régimen B es el que replica la situación de la persona natural, y el que este artículo defiende: **nivela sin inclinar**. El régimen C (tasa cero) inclinaría la cancha a favor del multifamily y tendría costo fiscal. No se recomienda.
 
-Los desarrolladores suelen comprar tierra con 100% de capital propio o con aportes de socios cercanos (Friends & Family). Si el costo de oportunidad de ese equity supera el 18-20%, cargar el terreno a esa tasa durante los 12 a 24 meses que toman los permisos destruye la rentabilidad desde el inicio. Con un terreno que representa el 20-30% del costo total, financiarlo al 20% es un lastre insuperable para un modelo de renta de márgenes ajustados.
+Estado normativo, a verificar al decidir:
 
-El plazo de permisos merece una nota propia. La Ley 29090 y su reglamento (D.S. 029-2019-VIVIENDA) fijan plazos de verificación mucho menores que los 12 a 24 meses habituales, y permiten adelantar la revisión con el anteproyecto en consulta. Reducir el tiempo de licencias es, en sí mismo, una forma de bajar el costo de capital de esta fase.
+- El Proyecto de Ley 58-2026 propone exonerar del IGV el arrendamiento de vivienda con vigencia de seis meses o más a personas naturales, en proyectos destinados exclusivamente a vivienda, y amplía el Bono de Arrendamiento (Ley 30952).
+- Es un proyecto, no una ley. Su texto final puede variar, y el tratamiento del crédito fiscal debe verificarse con un tributarista.
+- El D.Leg. 973 exige un contrato de inversión con el Estado, una inversión mínima de US$ 5 millones y una etapa preproductiva de al menos dos años. Un edificio de 100 unidades está en el límite.
 
-### 4.2. Solución: fondos de deuda privada y la Nota Puente de Suelo
+### 6.1 ¿Qué asimetrías son temporales y cuáles permanentes?
 
-Para bajar el WACC en esta fase hay que introducir un apalancamiento que la banca no ofrece. La propuesta es emitir instrumentos de deuda privada de corto plazo, suscritos por fondos especializados (como los que gestionan Acres SAFI o Credicorp Capital) o por family offices sofisticados.
-
-- **Vehículo legal:** fideicomiso de administración y garantía (Ley 26702, Ley General del Sistema Financiero) o patrimonio fideicometido de titulización. El terreno se transfiere al fideicomiso y forma un patrimonio autónomo, separado del riesgo de quiebra del desarrollador.
-- **Instrumento:** bonos o papeles comerciales en oferta privada, dirigidos a inversionistas institucionales.
-- **Plazo:** 18 a 24 meses, coincidente con la obtención de licencias y el cierre financiero de la construcción.
-- **LTV (Loan-to-Value):** conservador, entre 40% y 50% del valor del terreno.
-- **Tasa objetivo:** 11% a 13% en dólares, o su equivalente en soles.
-
-Una tasa de 12% parece alta frente a un hipotecario, pero es bastante menor que el 20% del equity. Financiar el 50% del terreno con deuda al 12% baja el costo ponderado de esta fase de 20% a 16%: una reducción de 400 puntos básicos que se capitaliza a favor del proyecto.
-
-Ese cálculo es antes de impuestos, y así debe leerse. En esta fase el proyecto no genera EBITDA, y la SUNAT ha precisado que el límite de deducción de intereses del 30% del EBITDA también se aplica a la etapa preoperativa (Informe 059-2020-SUNAT/7T0000). Los intereses no deducidos solo pueden arrastrarse a los cuatro ejercicios siguientes (Informe 064-2024), así que el escudo fiscal de esta deuda es reducido o nulo: la ventaja frente al equity debe sostenerse por sí sola, sin contar con el ahorro tributario.
-
-### 4.3. El rol de los inversionistas institucionales locales
-
-El mercado peruano tiene una industria creciente de fondos de deuda privada que buscan rendimientos de dos dígitos con garantías reales y tienen el mandato y la flexibilidad para estas operaciones, siempre que la estructura fiduciaria sea robusta. La clave es estandarizar estos créditos puente de tierra para reducir los costos legales y operativos de cada transacción.
-
-## 5. Fase II: sindicación bancaria y financiamiento de la construcción
-
-La construcción concentra el 60-70% del costo total, y es donde la ingeniería financiera puede tener más impacto en el WACC. La propuesta es migrar del préstamo bilateral (un solo banco con todo el riesgo) a un crédito sindicado estructurado con componentes de financiamiento mixto (Blended Finance).
-
-### 5.1. El Club Deal verde
-
-En proyectos BTR grandes (más de 200 unidades o más de US$ 20 millones), la exposición puede exceder el apetito de un solo banco o encarecer la tasa por concentración. La sindicación reparte el riesgo entre dos o tres entidades. Por sí sola no baja la tasa: para eso hay que incorporar un participante con menor costo de fondos, como la banca multilateral (IFC, IDB Invest, CAF) o la banca de desarrollo (COFIDE).
-
-1. **Banco agente y estructurador local** (BCP, BBVA, Scotiabank u otro): aporta conocimiento del mercado, gestiona los desembolsos y supervisa la obra. Retiene el tramo Senior A (40-50% del crédito).
-2. **Participante multilateral:** adquiere o garantiza el tramo Senior B (30-40%). Tiene mandato de desarrollo y sostenibilidad y acceso a fondeo global a tasas preferenciales.
-3. **Inversionistas institucionales o fondos de deuda locales:** toman un tramo mezzanine si se requiere más apalancamiento, o participan en el senior.
-
-**Dos costos que el modelo debe incluir.** Primero, la retención sobre intereses pagados al exterior: si el tramo B se presta directamente desde fuera del país, la tasa reducida de 4.99% solo aplica si se acredita el ingreso de la moneda al país y la tasa no excede la preferencial de la plaza de origen más tres puntos (art. 56 de la Ley del Impuesto a la Renta; Informe 129-2012-SUNAT). Si no se cumplen, la retención es de 30%, y con la cláusula de *gross-up* habitual la absorbe el proyecto. Si la entidad multilateral goza de alguna exoneración propia, debe verificarse caso por caso. Segundo, el límite de deducción de intereses: durante la obra el EBITDA tributario es casi nulo, de modo que buena parte de los intereses no será deducible en el ejercicio, y la excepción prevista para contratos APP no alcanza a un proyecto inmobiliario privado (Informe 171-2019-SUNAT). El WACC debe calcularse con ese escudo fiscal limitado.
-
-### 5.2. El catalizador: certificación EDGE y financiamiento verde
-
-El acceso al capital multilateral más barato suele exigir sostenibilidad: la certificación EDGE (Excellence in Design for Greater Efficiencies), promovida por el IFC.
-
-- El IFC otorga líneas a bancos locales, como el préstamo de US$ 60 millones a BBVA Perú para edificios verdes, con un descuento condicionado a colocar los fondos en proyectos certificados.
-- En una sindicación directa, el tramo multilateral puede tener un precio basado en SOFR más un spread bajo; con un swap a soles eficiente, el costo ponderado baja.
-- Algunos bancos ofrecen descuentos directos de 25 a 50 puntos básicos a proyectos EDGE, por su menor riesgo de obsolescencia y mayor liquidez futura.
-
-Este componente debe leerse con el test de la sección 3. El financiamiento multilateral es capital con mandato público y funciona como un cuasi-subsidio. Es compatible con la neutralidad si el mismo financiamiento verde está disponible para proyectos de venta con certificación equivalente, y si se plantea como un catalizador temporal mientras el mercado acumula historial de datos, no como pieza permanente del modelo.
-
-### 5.3. Garantías y covenants
-
-Para que los bancos presten sin preventas, que es el gran tabú del BTR, la estructura de garantías debe ser hermética:
-
-- **Fideicomiso de administración integral:** el sindicato controla el terreno, la obra y todos los flujos futuros. No hay caja del desarrollador; hay caja del proyecto.
-- **Derechos de intervención (step-in rights):** ante un incumplimiento (retraso, sobrecostos no cubiertos), el sindicato puede desplazar al desarrollador y nombrar a otro gestor para terminar la obra sin ejecutar la hipoteca ni rematar un activo inconcluso. Eso reduce la pérdida dado el incumplimiento (LGD) y justifica una menor prima de riesgo.
-- **Garantía de terminación (completion guarantee):** el desarrollador o su matriz otorga una fianza corporativa que asegura el fin de la obra y la obtención de la conformidad de obra y declaratoria de edificación ante la municipalidad (Ley 29090). Con el edificio terminado, inscrito en SUNARP y operando, la garantía se libera y el préstamo pasa a ser sin recurso (non-recourse), solo contra el activo. La inscripción de la declaratoria y, si corresponde, la independización son también condición para constituir las garantías definitivas y para la venta posterior a una FIBRA.
-
-Con sindicación, componente multilateral y garantías estructuradas, es posible bajar la tasa del crédito de construcción del 10.5-11.5% habitual a un rango de 8.5-9.5%. Esos 200 puntos básicos son cruciales para la viabilidad, una vez descontados los costos de retención y de escudo fiscal que se señalaron arriba.
-
-## 6. Fase III: estabilización y el préstamo mini-perm
-
-Terminada la obra, el edificio entra en colocación de alquileres (lease-up), y ahí aparece el mayor riesgo de refinanciamiento: el crédito de construcción vence, pero el edificio aún no está estabilizado (ocupación por debajo de 90-95%) para venderse a precio pleno o refinanciarse con un bono de largo plazo. El mercado peruano carece de productos para esta etapa intermedia. Proponemos introducir de forma masiva el préstamo mini-perm.
-
-### 6.1. Mecánica del mini-perm
-
-El mini-perm es un préstamo de mediano plazo que sirve de puente entre la construcción y el financiamiento permanente o la venta.
-
-- **Plazo:** 5 a 7 años.
-- **Años 1-2 (lease-up):** periodo de gracia de principal; el proyecto solo paga intereses mientras llena los departamentos.
-- **Años 3-7 (estabilización):** amortización suave, calculada como si fuera un préstamo a 25 o 30 años.
-- **Vencimiento:** pago global (balloon) del saldo, aproximadamente 70-80% del principal original, que se cubre refinanciando o vendiendo el activo.
-
-### 6.2. El sindicato mini-perm: bancos y aseguradoras
-
-Los bancos no son los tenedores ideales de riesgo a siete años, por el descalce con sus depósitos. Las compañías de seguros (Rímac, Pacífico, Mapfre, La Positiva), en cambio, tienen pasivos de muy largo plazo, como las rentas vitalicias, y necesitan activos que calcen con esa duración.
-
-- **Banco originador:** mantiene la relación con el cliente y, eventualmente, un tramo corto (años 1-3).
-- **Aseguradoras:** compran la "cola" del crédito o participan desde el inicio en un tramo a tasa fija en soles indexados al VAC (Valor de Actualización Constante, que publica el BCRP en función de la inflación) o en soles nominales. El tramo indexado al VAC, además, calza naturalmente con alquileres que se reajustan por inflación.
-- **Tasa objetivo:** para una aseguradora, un activo inmobiliario prime con garantía fiduciaria que rinda el soberano más 150 a 200 puntos básicos (aproximadamente 8.5% a 9.0%) es atractivo frente a otros activos corporativos.
-
-La entrada de aseguradoras y fondos también responde al diagnóstico de la sección 2.3: suma competidores a la banca en el financiamiento de largo plazo y obliga a estandarizar la información del activo (rent roll, ocupación, morosidad) para que el riesgo pueda evaluarse y transarse.
-
-### 6.3. Cobertura de tasas
-
-Si el mini-perm es a tasa variable, una subida de tasas puede romper el ratio de cobertura del servicio de la deuda (DSCR). La estructuración debe incluir un techo de tasa (interest rate cap) o un swap de tasa variable a fija sobre el 50-70% de la deuda. Tiene un costo, pero elimina el riesgo de cola de una escalada de tasas y permite un apalancamiento mayor y más seguro.
-
-## 7. Salida: el mercado de capitales y las FIBRA
-
-El ciclo de capital se cierra cuando el desarrollador vende el activo estabilizado a un vehículo de largo plazo y recicla su capital en el siguiente proyecto. En el Perú ese vehículo es la FIBRA (Fideicomiso de Titulización para Inversión en Renta de Bienes Raíces), regulada por la SMV, junto con el FIRBI (Fondo de Inversión en Renta de Bienes Inmuebles, D.Leg 1188). Ambos están incluidos en el régimen reglamentado por el DS 336-2018-EF.
-
-### 7.1. El ecosistema actual
-
-Fibra Prime fue el primer vehículo de este tipo en el país y cuenta con inversión de la IFC, que en 2025 anunció un aporte de US$40 millones. Ha demostrado apetito por activos de renta, aunque su portafolio se concentra en oficinas, retail e industria. La vivienda en renta todavía no tiene un vehículo especializado con historial público de desempeño. Esa ausencia de datos es en sí misma una de las imperfecciones del mercado descritas en la sección 2.3.
-
-### 7.2. El régimen FIBRA: neutralidad, no subsidio
-
-El régimen tributario de las FIBRA es la pieza que más acerca al inversionista institucional a la situación del pequeño propietario que compra para alquilar. No es un subsidio sectorial: aplica a cualquier activo de renta, sea vivienda, oficina o almacén.
-
-- **Diferimiento en el aporte (Ley 30532, art. 3):** la transferencia fiduciaria del inmueble a la FIBRA no genera de inmediato la renta gravada; esta se difiere hasta que la FIBRA enajene el inmueble o el aportante transfiera sus certificados.
-- **Retención definitiva de 5% (Ley 30532, art. 4):** las rentas por arrendamiento que la FIBRA atribuye a personas naturales tributan con una retención definitiva de 5%, cercana a la tasa efectiva de 5% (6.25% sobre la renta neta, LIR art. 52-A) que paga un propietario individual. Requisito: el titular de los certificados, junto con sus partes vinculadas, no debe tener 20% o más de los certificados.
-
-Esto es exactamente lo que pide el principio de neutralidad: que el inquilino final reciba un servicio similar con una carga tributaria similar, sea el dueño una familia o un fondo.
-
-### 7.3. Vender o aportar: dos salidas con efectos distintos
-
-El desarrollador tiene dos caminos de salida, con efectos tributarios distintos:
-
-| Camino | Efecto tributario | Liquidez para pagar el balloon |
+| Asimetría frente al BTS | Naturaleza | Qué la corrige |
 |---|---|---|
-| **Venta a la FIBRA** | IGV 18% por la primera venta del constructor (TUO IGV, art. 1 d) e Impuesto a la Renta sobre la ganancia | Sí: recibe efectivo |
-| **Aporte a la FIBRA** | Diferimiento de la renta (Ley 30532, art. 3) | No: recibe certificados, no efectivo |
+| IGV sobre el alquiler de empresas | Temporal: la crea la norma | Paridad: alquiler de vivienda exonerado, como en Colombia (ET art. 476) y Chile (SII: arriendo sin amoblar no gravado) |
+| IR que el arrendador informal no paga | Temporal: la crea la falta de fiscalización | Fiscalización y cruce con el RAV y SUNARP |
+| Prima de riesgo por falta de historia | Temporal: baja con información | Serie pública de rentas y morosidad; rent rolls estandarizados |
+| Falta de deuda de largo plazo en soles | Temporal: baja con mercado de capitales | Titulización, FIBRA, AFP |
+| Reciclaje de capital: 3-4 años en BTS frente a 10 o más en BTR | **Permanente** | Capital por etapas: cada inversionista entra y sale según su horizonte |
+| Retorno bajo que acepta el comprador que invierte, y que fija el precio del suelo | **Permanente** | Ninguna política tributaria: refleja preferencias |
 
-La estructura debe modelar cuál de las dos se usará. Si la salida es por aporte, el mini-perm no puede contar con el producto de la venta para el balloon: necesita un refinanciamiento o una venta posterior de certificados en el mercado.
+Corregir las cuatro primeras es necesario y no cuesta subsidios. Las dos últimas explican por qué, aun corregidas, el BTR solo compite por el suelo donde logra una prima de renta. El [artículo 2](btr-y-brecha-de-vivienda-lima-callao.md) trata qué hacer si se quiere vivienda en renta fuera de ese nicho.
 
-### 7.4. El Forward Purchase Agreement
+## 7. Lo que la ingeniería financiera sí hace, y lo que no
 
-El Forward Purchase Agreement (contrato de compra futura) entre el desarrollador y una FIBRA o fondo antes de construir hace bancable todo el ciclo. La FIBRA se compromete a comprar el edificio al estabilizarse a un cap rate preacordado (por ejemplo, 6.5%).
+**Tabla 8. Efecto de cada palanca financiera** (régimen A, terreno a precio de mercado).
 
-- **Impacto en el crédito:** con este contrato, el banco de construcción y el mini-perm ya no evalúan solo el riesgo de mercado, sino el riesgo de crédito del comprador. Cuanto mejor sea la clasificación de riesgo de ese comprador, menor podrá ser el diferencial del préstamo; por eso conviene verificar la clasificación vigente de la FIBRA o el fondo antes de estructurar la deuda sobre ella.
-- **Condiciones:** el contrato debe fijar con precisión los hitos de entrega (conformidad de obra, declaratoria de edificación inscrita, ocupación mínima), el mecanismo de ajuste de precio y quién asume el IGV de la transferencia.
+| Palanca | TIR no apalancada | TIR del capital | Lectura |
+|---|---|---|---|
+| Caso base (crédito de obra + mini-perm) | 0.5% | −5.4% | |
+| + Nota puente de terreno (45% al 12%) | 0.5% | −6.0% | Con TIR baja, deuda al 12% resta |
+| Sin mini-perm (el capital cancela la obra en t14) | 0.5% | −2.0% | **La deuda destruye valor** cuando el activo rinde menos que ella |
+| Mini-perm solo intereses | 0.5% | −6.7% | Más deuda, peor resultado |
+| + Financiamiento verde (−75 pb; +1% de costo) | 0.4% | −5.4% | Neutro |
+| + Construcción industrializada (−5% de costo directo) | 0.7% | −4.9% | Marginal |
+| + Recuperación anticipada del IGV | 1.2% | −5.0% | La palanca individual más útil |
+| Todas las palancas juntas | 1.2% | −5.0% | Insuficiente: el umbral es 9% / 14% |
 
-### 7.5. Margen de desarrollo, no especulación
+Tres lecciones:
 
-Si el proyecto se construye con un yield on cost (rendimiento sobre el costo total) de 7.5-8% y se vende a una FIBRA a un cap rate de salida de 6-6.5%, la diferencia es el margen del desarrollador. Esto es coherente con la sección 2.2: el cap rate de salida refleja el retorno que acepta un comprador de un activo estabilizado y de bajo riesgo, mientras que el yield on cost remunera el riesgo de suelo, licencias, obra y colocación. La ganancia no viene de apostar a que los cap rates bajen, sino de crear un activo de renta que antes no existía.
+1. **Apalancamiento negativo real.** Con un YoC de 5.7%-6.4% y deuda a 9%-10%, cada sol prestado reduce la TIR del capital. La deuda sirve para un activo que ya crea valor; no lo crea.
+2. **El mini-perm lo limita el DSCR, no el LTV.** Con NOI de S/ 256 por m², tasa de 9% y amortización a 20 años (constante anual de 10.6%), un DSCR de 1.25x permite prestar solo 49% del valor. Un crédito de obra dimensionado a 55% del costo deja un **hueco de refinanciamiento de S/ 619 por m²** (S/ 3.4 millones en el proyecto), que debe cubrir el capital. Con amortización a 25-30 años y plazo de 5-7 años, el saldo final sería de 89% a 96%: un riesgo de refinanciamiento que el contrato debe reconocer, no esconder.
+3. **La nota puente de terreno solo conviene si el proyecto rinde más que ella.** Es una herramienta de liquidez, no de valor.
 
-## 8. Impacto urbano y la vivienda social en arrendamiento
+La ingeniería financiera importa por otra razón: **hace financiable un proyecto que ya es viable**. Los contratos estándar del repositorio (mini-perm, compraventa futura, fideicomiso, acuerdo directo, tasación) bajan costos de transacción, ordenan riesgos y permiten que bancos, aseguradoras y FIBRA participen. Ese valor no aparece en una TIR, pero es real.
 
-### 8.1. El valor residual del suelo
+## 8. Qué tiene que ser cierto: el mapa de viabilidad
 
-El precio que un desarrollador puede pagar por un terreno es su valor residual: el valor del proyecto terminado menos costos y margen. Un multifamily bien financiado puede ofrecer un precio competitivo frente a un proyecto de venta tradicional, siempre que su valor se mida por los ingresos que genera (enfoque de renta) y no solo por comparables de venta. Para ello, los tasadores y los bancos deben aceptar valorizaciones por capitalización de ingresos. Esa es una tarea de estandarización, no de subsidio.
+**Tabla 9. Ratio entre el terreno que puede pagar el BTR (vara laxa) y el precio de mercado** (≥ 1.00: el BTR compite por el suelo).
 
-### 8.2. Derechos adicionales de edificación (Ley 31313)
+| Prima de renta | Régimen | Cap 5.50% | Cap 6.00% | Cap 6.50% | Cap 7.00% | Cap 7.50% |
+|---|---|---|---|---|---|---|
+| 0% | A (vigente) | 0.38 | 0.07 | −0.19 | −0.41 | −0.60 |
+| 0% | B (exonerado) | 0.74 | 0.38 | 0.07 | −0.19 | −0.41 |
+| 10% | A | 0.84 | 0.49 | 0.19 | −0.06 | −0.27 |
+| 10% | B | **1.29** | 0.87 | 0.52 | 0.22 | −0.03 |
+| 20% | A | **1.30** | 0.91 | 0.57 | 0.29 | 0.05 |
+| 20% | B | **1.83** | **1.36** | 0.97 | 0.63 | 0.35 |
+| 30% | A | **1.77** | **1.32** | 0.96 | 0.64 | 0.38 |
+| 30% | B | **2.37** | **1.85** | **1.41** | **1.04** | 0.73 |
 
-La Ley 31313, de Desarrollo Urbano Sostenible, crea instrumentos de gestión del suelo como los Derechos Adicionales de Edificación Transferibles (DAET). No se trata de derechos que el desarrollador compre directamente a la municipalidad: en el esquema típico, se generan a favor de propietarios privados en zonas generadoras (por ejemplo, de conservación) y se transfieren a proyectos en zonas receptoras, donde permiten construir por encima de los parámetros normales. Su uso concreto depende del reglamento y de la habilitación de zonas receptoras en cada distrito.
+Cómo leer el mapa:
 
-El principio de neutralidad también aplica aquí: si se otorgan bonos de altura o DAET, deben estar disponibles para cualquier proyecto que cumpla las mismas condiciones urbanas (densidad, áreas verdes, cercanía al transporte), sea de venta o de renta. Un bono reservado solo para multifamily alteraría la competencia por el suelo.
+- **Sin prima de renta, ninguna combinación alcanza el precio de mercado del terreno,** ni siquiera con el alquiler exonerado y un cap de 5.5%.
+- **Con el IGV neutral (régimen B), hacen falta una prima de 20% y un cap de 6.0%,** o una prima de 10% con un cap de 5.5%. Con la vara estricta (capital al 14%) se necesita aún más: una prima de 20% con un cap de 5.5%, o una prima de 30% con un cap de 6.0%.
+- **¿Qué significa "prima de renta"?** Es lo que el edificio institucional cobra por m² por encima del promedio distrital: producto nuevo, unidades pequeñas, amoblado, servicios y gestión profesional, neto del sobreprecio que ese mismo producto tendría en venta. El comprador BTS también puede construir unidades pequeñas y venderlas más caras.
+- **Lo que se puede afirmar.** No hay una serie pública que mida esa prima en Lima. Es el dato más importante por levantar (sección 11). Los avisos de renta son mayormente de unidades usadas y los de venta, de proyectos nuevos, lo que sugiere una prima por producto nuevo de algunos puntos. Una prima de 20% o más debe demostrarse con contratos firmados, no suponerse.
 
-### 8.3. La vivienda social en arrendamiento: el único subsidio justificado
+### 8.1 Dónde sí cierra hoy: la prima que hace falta y los casos en operación
 
-El DS 005-2025-VIVIENDA reconoce la "vivienda en arrendamiento" como modalidad de Vivienda de Interés Social (art. 7) y prevé subsidios al arrendamiento, incluido el multifamily (art. 14). Esto no contradice la tesis del artículo, siempre que se entienda bien:
+**Tabla 9-bis. Prima de renta con la que el BTR paga el terreno de mercado** (renta de oferta equivalente; base: US$ 119.3 por m² al año en Lima Moderna; sale de la función `sens_renta` del modelo).
 
-- **El subsidio va a la demanda, no al desarrollador:** apoya a la familia que no puede pagar la renta de mercado, igual que el Bono Familiar Habitacional apoya a quien compra.
-- **Debe ser neutral entre ofertas:** el subsidio debe poder aplicarse a cualquier vivienda que cumpla los estándares, sea de un fondo o de un propietario individual.
-- **No debe sostener la viabilidad del proyecto de mercado:** un multifamily de segmento medio o alto que solo cierra con subsidio no es un buen negocio, es una transferencia.
+| Régimen de IGV | Cap de salida | Vara laxa (9% sin deuda) | Vara estricta (14% al capital) |
+|---|---|---|---|
+| A (vigente) | 6.0% | +22% (US$ 146) | +39% (US$ 165) |
+| A (vigente) | 6.5% | +31% (US$ 156) | +46% (US$ 174) |
+| B (exonerado) | 6.0% | +13% (US$ 134) | +27% (US$ 151) |
+| B (exonerado) | 6.5% | +21% (US$ 144) | +34% (US$ 159) |
 
-### 8.4. Estabilidad de largo plazo
+**Tabla 9-ter. Edificios multifamily lanzados en Lima** (datos de oferta; nov-2026 salvo indicación).
 
-Un dueño institucional tiene incentivos para mantener el edificio, gestionarlo de forma profesional y renovar contratos, porque su valor depende del flujo de rentas. Eso aporta estabilidad urbana sin necesidad de subsidiar al dueño.
+| Edificio | Ubicación | Producto | Alquiler de oferta | Renta implícita |
+|---|---|---|---|---|
+| Av. Ricardo Palma 251 | Miraflores | 280 unidades de 1-2 dormitorios, 53-60 m² | Desde S/ 2,909 al mes | ≈ US$ 170-190 por m² al año |
+| LiveSpace La Mar (Parque Arauco; inversión de US$ 16 millones; LEED Silver) | Miraflores | Unidades de 1 dormitorio y 1 dormitorio + estudio | S/ 2,385 a S/ 2,970 al mes | Área por verificar |
+| Mercado multifamily de Lima (Gestión) | Lima Top | 160 unidades en operación y ~900 en construcción (nov-2024) | Más de S/ 2,400 al mes (jun-2024) | — |
 
-## 9. Conclusiones y hoja de ruta
+Cómo se leen las dos tablas:
 
-### 9.1. El principio rector
+- **La renta de oferta de los edificios lanzados es entre 45% y 60% mayor que el promedio de Lima Moderna.** Supera incluso la prima más exigente de la tabla 9-bis (+46%, IGV vigente, vara estricta).
+- **No es casualidad que estén en Miraflores.** Es donde el producto institucional logra esa prima.
+- **Hay que hacer dos precisiones:**
+  - el suelo de Lima Top es más caro que el de Lima Moderna, así que la comparación es con el terreno de Lima Moderna y sobrestima el margen real de esos proyectos;
+  - las rentas son de oferta e incluyen amoblado y servicios, mientras que el modelo supone una renta de cierre sin servicios.
+- **Lo que sí se puede afirmar:** el patrón de lanzamientos coincide con el mapa de viabilidad. Hay multifamily donde el alquiler soporta una prima de 30% o más, y no lo hay en el resto de Lima.
+- **Para el promotor,** la regla práctica es demostrar esa prima con contratos firmados antes de comprar el terreno.
 
-El multifamily no necesita un trato especial. Necesita dos cosas: un mercado de capitales más competitivo y mejor informado, y una cancha tributaria pareja frente al propietario individual que compra para alquilar. Su viabilidad debe salir de un modelo de negocio bien armado, no de un subsidio que le dé ventaja en la competencia por el suelo frente al proyecto de venta tradicional. El único subsidio justificado es el que va a la demanda en vivienda social, y debe ser neutral entre tipos de oferta.
+**Tabla 10. Casos de nicho y alternativas de salida.**
 
-### 9.2. La propuesta de valor de la ingeniería financiera
+| Caso | YoC | TIR no apalancada | TIR del capital | Lectura |
+|---|---|---|---|---|
+| B + prima 10% + cap 6.0% + terreno al 50% del mercado (aporte, joint venture) | 7.55% | 11.1% | 11.8% | Viable con la vara laxa, no con la estricta |
+| Ídem sin mini-perm | 7.55% | 11.1% | 11.2% | Con un activo que crea valor, la deuda suma poco |
+| A + prima 10% + cap 6.0% + terreno al 50% | 7.28% | 8.4% | 7.1% | No alcanza con el IGV vigente |
+| B + prima 10% + cap 6.0% + terreno aportado sin costo | 8.51% | 15.6% | 21.2% | El propietario del suelo que quiere renta es el socio natural |
+| B + prima 20% + cap 6.0% + terreno a mercado | 7.55% | 10.7% | 11.0% | Viable con la vara laxa |
+| A con salida por venta de unidades a personas naturales | 5.69% | 6.4% | 4.4% | Captura la brecha de la sección 5, pero es un BTS diferido: retira la vivienda del alquiler y no se recomienda como estrategia de vivienda en renta |
+| A con tenencia de 10 años | 5.69% | 5.1% | 2.9% | El tiempo diluye el arrastre del crédito fiscal, no la brecha |
+| B con tenencia de 10 años | 6.00% | 6.2% | 4.4% | |
 
-1. **Suelo:** sustituir capital propio caro (aprox. 20% antes de impuestos) por capital mezzanine más barato (aprox. 16%) en la etapa de licencias, con un Land-Bridge Note sujeto a hitos.
-2. **Construcción:** acceder a deuda verde (IFC vía bancos locales) para el tramo senior, siempre que la certificación EDGE esté disponible también para proyectos de venta.
-3. **Estabilización:** usar mini-perms sindicados con aseguradoras (aprox. 8.5-9.0%) para dar tiempo al lease-up sin presión de venta.
-4. **Salida:** fijar el precio con un Forward Purchase Agreement con FIBRA, que reduce el riesgo del ciclo completo.
+**Tabla 11. Por distrito** (precio y alquiler del BCRP para cada distrito; mismos costos).
 
-En todas las etapas, el modelo debe incorporar dos restricciones tributarias que suelen omitirse: el límite de deducción de intereses de 30% del EBITDA tributario (aplicable también en la etapa preoperativa) y la retención de 4.99% vs 30% sobre intereses de préstamos del exterior.
+| Distrito | PER | TIR no apalancada A / B | Ratio de terreno A / B |
+|---|---|---|---|
+| Surquillo | 14.4 | 2.9% / 5.2% | 0.09 / 0.41 |
+| Lince | 14.9 | 2.6% / 4.9% | 0.18 / 0.46 |
+| Pueblo Libre | 14.9 | 1.0% / 3.0% | −0.47 / −0.13 |
+| Jesús María | 16.7 | −0.1% / 2.0% | −0.01 / 0.20 |
+| Magdalena | 16.2 | −0.5% / 1.5% | −0.29 / −0.05 |
+| San Miguel | 17.0 | −3.3% / −1.7% | −1.21 / −0.97 |
 
-### 9.3. Hoja de ruta para el sector
+Los distritos con PER más bajo (Surquillo, Lince) son los menos desfavorables, pero ninguno cierra sin prima ni cap institucional. Los distritos de Lima Top tienen PER más alto (Surco 19.8, San Borja 18.1), lo que agrava el problema.
 
-- **Estandarización contractual:** que ASBANC y CAPECO desarrollen contratos modelo para mini-perms y Forward Purchase Agreements, reduciendo costos legales y tiempos de cierre.
-- **Originación verde:** que los bancos locales creen líneas específicas para proyectos certificados EDGE, apoyadas en fondeo multilateral, abiertas a vivienda en venta y en renta.
-- **Mesas de sindicación:** que los bancos creen áreas que distribuyan riesgo inmobiliario a aseguradoras y AFP, en lugar de mantenerlo en balance.
-- **Datos públicos de desempeño:** publicar indicadores agregados de vivienda en renta (ocupación, morosidad, renta por m², rotación) para reducir la asimetría de información y el diferencial que hoy cobran los financistas.
-- **Agenda de neutralidad tributaria:** revisar la asimetría del IGV sobre el arrendamiento (18% cuando arrienda una empresa, exonerado cuando arrienda una persona natural) y evaluar extender a otros vehículos de renta un tratamiento equivalente al de la FIBRA. El objetivo no es favorecer al multifamily, sino que el inquilino enfrente la misma carga tributaria sin importar quién sea el dueño.
+## 9. Robustez del resultado
 
-## 10. Fuentes
+- **Después de IR (29.5%).** Con terreno de mercado, la TIR no apalancada después de impuestos es 12.3% en BTS frente a −0.4% en BTR (régimen A), 1.8% (régimen B) y 4.0% (A con venta por unidades). La depreciación y el diferimiento ayudan al BTR, pero no cambian la conclusión.
+- **Supuestos adversos al BTS.** Si el precio de venta baja 5%, el terreno de mercado cae a S/ 833 por m². Si las ventas tardan 16 trimestres, a S/ 847. Si el costo directo sube 10%, a S/ 752. Aun con S/ 750 por m², el BTR del caso base tiene una TIR no apalancada cercana a 2%.
+- **Supuestos favorables al BTR ya incluidos.** Rentabilidad bruta del BCRP (6.4%) en lugar de la de Urbania (5.3%-5.4%); el IGV no recuperado del BTS se trata como pérdida; el crédito fiscal del BTR se transfiere al comprador con solo 25% de descuento.
+- **Sensibilidad operativa.** Una vacancia de 8% resta 1.0 punto de TIR no apalancada y un opex 20% más alto, 1.5 puntos. Un cap de 7.0% la lleva a −1.0%.
 
-1. TUO de la Ley del Impuesto a la Renta, DS 179-2004-EF: art. 39 (depreciación de edificaciones), art. 52-A (rentas netas de capital), límite de deducción de intereses y retención sobre intereses de créditos del exterior.
-2. Reglamento de la Ley del Impuesto a la Renta, DS 122-94-EF, y sus modificatorias (DS 033-2017-EF y DS 337-2018-EF).
-3. TUO de la Ley del IGV e ISC, DS 055-99-EF: arts. 1 d, 2 a y 3 c.
-4. Reglamento de la Ley del IGV, DS 029-94-EF.
-5. Decreto Legislativo 973, Régimen Especial de Recuperación Anticipada del IGV, y su Reglamento, DS 084-2007-EF.
-6. Ley 30532, régimen tributario de las FIBRA, arts. 3 y 4.
-7. DS 336-2018-EF, alcance del régimen a FIBRA y FIRBI.
-8. Decreto Legislativo 1188, Fondos de Inversión en Renta de Bienes Inmuebles (FIRBI).
-9. TUO del Código Tributario, DS 133-2013-EF.
-10. Ley 29090, Ley de Regulación de Habilitaciones Urbanas y de Edificaciones, y su TUO, DS 006-2017-VIVIENDA.
-11. DS 005-2025-VIVIENDA, arts. 7 y 14 (Vivienda de Interés Social en arrendamiento).
-12. Ley 31313, Ley de Desarrollo Urbano Sostenible.
-13. Congreso de la República, Proyecto de Ley 07664/2020-CR.
-14. SUNAT, Informe 064-2024-SUNAT: límite de 30% del EBITDA y arrastre de intereses.
-15. SUNAT, Informe 059-2020-SUNAT: límite de intereses en la etapa preoperativa.
-16. SUNAT, Informe 171-2019-SUNAT: alcance de la excepción para proyectos de infraestructura pública.
-17. SUNAT, Informe 129-2012-SUNAT: requisitos de la tasa de 4.99% sobre intereses de créditos del exterior.
-18. MEF, Informe Anual de Deuda Pública 2024.
-19. BCRP, Reporte de Estabilidad Financiera, noviembre 2024.
-20. BCRP, Indicadores del mercado inmobiliario del IT de 2024 (Nota de Estudios 38-2024).
-21. SBS, Tasas de interés por tipo de crédito y empresa bancaria.
-22. SBS, Tasas de interés por tipo de crédito y empresa financiera.
-23. Navarro CAD, 2024 1st Quarter Cap Rates (RealtyRates.com).
-24. Apartment Loan Store, Cap Rates for Apartment/Multifamily Properties 2025.
-25. ACRES SAFI, fondos con rendimientos anuales superiores a 7.5% en dólares.
-26. SMV, ACRES Fondo de Inversión Impulso de Efectivo, Soles.
-27. Scotiabank Perú, Crédito hipotecario 2025.
-28. BCP, Crédito a la construcción: financiamiento de proyectos inmobiliarios de vivienda.
-29. Moody's Local Perú, Fondos de inversión.
-30. IDB Invest, Credicorp Capital, Fondo de Deuda Privada.
-31. Credicorp Capital, Nuestros productos.
-32. IFC, IFC invierte US$40 millones en Fibra Prime (2025).
-33. IFC, Sustainable Buildings: Finance Reference Guide (2025).
-34. IFC, préstamo de US$60 millones a BBVA Perú para edificios verdes (2022).
-35. GBCI, EDGE Green Building Certification.
-36. SGS Perú, Certificación EDGE.
-37. Fibra Prime, sitio institucional y Reporte de Resultados 2T25.
-38. Semana Económica, Fibra Prime anunció la adquisición de dos inmuebles por más de US$6 millones.
-39. Estudio Estrada Abogados, plusvalías urbanas e instrumentos de la Ley de Desarrollo Urbano Sostenible.
+## 10. Recomendaciones
+
+**Para promotores e inversionistas**
+
+1. **No compren terreno a precio BTS para hacer BTR genérico.** Busquen suelo que no compita con el BTS: aporte de propietarios patrimoniales a cambio de renta (contrato de asociación o fideicomiso con participación en el NOI), tierra en balance de retailers, universidades, clínicas o instituciones, y lotes con baja absorción para venta.
+2. **Diseñen el producto para la prima, y pruébenla.** Unidades pequeñas, amobladas, con servicios. Antes de comprometer capital, levanten comparables de renta firmada (no de oferta) por tipología.
+3. **Usen deuda solo cuando el YoC supere su costo.** Dimensionen el crédito de obra a la toma del mini-perm (LTV de 45%-50% por DSCR) y planifiquen el capital del hueco de refinanciamiento.
+
+**Para FIBRA, AFP y aseguradoras**
+
+4. Un cap institucional de 6.0% en vivienda requiere historia de desempeño. Pidan rent rolls estandarizados (contrato 04) y financien plataformas, no edificios sueltos. La restricción de cuatro años para transferir inmuebles adquiridos o construidos por una FIBRA debe reflejarse en la compraventa futura (contrato 02).
+
+**Para el Estado**
+
+5. **Neutralidad del IGV, no ventaja.** Exonerar el alquiler de vivienda por empresas, con el crédito fiscal de obra como costo (régimen B), replica la situación de la persona natural. Una tasa cero con devolución no se justifica.
+6. **Información.** Una serie pública de rentas de cierre, vacancia y morosidad (BCRP/SBS a partir de los registros del RAV y del FUA del D.Leg. 1177) reduciría la prima de riesgo más que cualquier incentivo.
+7. **Predial y licencias.** Revisen si la progresividad del predial por propietario debe aplicarse por unidad de vivienda en edificios de renta. Cumplir los plazos de la Ley 29090 baja el costo de capital de la fase de licencias.
+8. **Vivienda social en arrendamiento.** La Ley 32379 (VIS) y su reglamento en consulta (RM 269-2026-VIVIENDA) son el lugar para un subsidio *explícito* a la demanda (Bono de Arrendamiento, Ley 30952). No corresponde un subsidio al vehículo. Si se quiere vivienda en renta para la brecha, el instrumento que no subsidia el modelo es el suelo público cedido en derecho de superficie y cobrado en la cascada de retornos. Se desarrolla en el [artículo 2](btr-y-brecha-de-vivienda-lima-callao.md).
+
+## 11. Riesgos y límites del análisis
+
+- **Los datos de precio y renta son de oferta.** Una base de transacciones podría mover el PER en cualquier dirección.
+- **El costo de construcción viene de fuentes débiles.** La calibración del BTS lo valida de forma indirecta, pero hay que contrastarlo con presupuestos reales.
+- **La prima de renta no tiene serie pública.** Es la variable más sensible y la menos medida.
+- **Dos simplificaciones tributarias.**
+  - En el régimen B con venta por unidades no se modela la prorrata del crédito fiscal.
+  - Las pérdidas tributarias se arrastran sin límite.
+- **El cap de salida es una estimación sin transacciones residenciales institucionales comparables en Perú.**
+- **El modelo es de un proyecto tipo.** Cada terreno requiere su propio análisis; el modelo está publicado para eso.
+
+## Datos a verificar
+
+| Dato | Valor usado | Fuente sugerida |
+|---|---|---|
+| Precio y alquiler de cierre por tipología | Oferta − 4% | Tasaciones; registros SUNARP; RAV (D.Leg. 1177) |
+| Prima de renta del producto institucional | 0% base; mapa de 0%-30%; equilibrio de 13%-46% (tabla 9-bis) | Rent rolls de edificios en operación (contrato 04) |
+| Renta de cierre y área de los edificios lanzados (LiveSpace La Mar, Ricardo Palma 251) | Oferta: US$ 170-190 por m² al año | Operadores; avisos actualizados; tasaciones |
+| Incidencia del terreno en Lima Moderna | 15.7% de las ventas | Transacciones de terrenos; tasadores |
+| Costo directo por m² techado | S/ 2,050 sin IGV | Presupuestos de constructoras; CAPECO; índices INEI |
+| Tasa del crédito de obra y del mini-perm en soles | 10.0% y 9.0% TEA | SBS, tasas activas de medianas y grandes empresas; cotizaciones bancarias |
+| Cap rate institucional residencial | 6.50% | Transacciones de FIBRA/fondos; clasificadoras |
+| Texto final del PL 58-2026 y tratamiento del crédito fiscal | Régimen B | Congreso; SUNAT; tributarista |
+| Requisitos y plazos del D.Leg. 973 | Devolución con 2 trimestres de rezago | MEF, ProInversión |
+| Predial de un edificio de renta | S/ 22 por m² al año | Municipalidad distrital; autoavalúo |
+
+## Fuentes
+
+1. BCRP, *Nota de Estudios 16-2026: Indicadores del mercado inmobiliario, IV trimestre 2025*: https://www.bcrp.gob.pe/docs/Publicaciones/Notas-Estudios/2026/nota-de-estudios-16-2026.pdf
+2. BCRP, BCRPData, series de precios por m² (PD38028PQ, PD37944PQ) e indicador PER: https://estadisticas.bcrp.gob.pe/estadisticas/series/trimestrales/mercado-inmobiliario
+3. Andina, "BCR eleva tasa de interés de referencia a 4.50% por inflación" (12-nov-2026): https://andina.pe/agencia/noticia-bcr-eleva-tasa-interes-referencia-a-450-inflacion-1099738.aspx
+4. BBVA Research, "Perú | BCRP eleva la tasa a 4,50 % y no descartamos algún ajuste adicional" (13-nov-2026): https://www.bbvaresearch.com/publicaciones/peru-bcrp-eleva-la-tasa-a-450-y-no-descartamos-algun-ajuste-adicional/
+5. Panamericana, inflación de 5.3% a octubre de 2026: https://panamericana.pe/politica/477390-bcr-eleva-tasa-interes-4-50-contener-avance-inflacion
+6. MEF, Reporte diario de bonos soberanos (30-set-2026): https://www.mef.gob.pe/contenidos/english/report/2026/Daily_09_30_26.pdf
+7. Andina, tasa hipotecaria promedio en soles 2026 (BCRP): https://andina.pe/agencia/noticia-mercado-inmobiliario-credito-hipotecario-crece-76-a-julio-1092400.aspx
+8. BCRP, Nota Informativa del 16-mar-2026, tasas activas por segmento: https://www.bcrp.gob.pe/docs/Transparencia/Notas-Informativas/2026/nota-informativa-2026-03-16.pdf
+9. Urbania, *Index Lima*, octubre 2025 (rentabilidad bruta de 5.27%): https://urbania.pe/blog/wp-content/uploads/2025/11/INDEX_LIMA_REPORTE_2025-10.pdf
+10. Gestión, rentabilidad bruta de 5.44% en Lima (Urbania, 2026): https://gestion.pe/economia/empresas/compra-de-viviendas-la-mayor-demanda-es-por-departamentos-de-entre-45-m2-a-80-m2-noticia/
+11. Revista Economía, FIBRA Prime al II trim. 2026: https://www.revistaeconomia.com/fibra-prime-avanza-en-la-adquisicion-del-parque-logistico-lima-sur-por-us145-millones/
+12. Infomercado, FIBRA Prime: 40 inmuebles y 95.3% de ocupación: https://infomercado.pe/parque-logistico-lima-sur/
+13. Mercado Libre Chile, datos de ACAFI sobre renta residencial (jul-2026): https://www.mercadolibre.cl/blog/re-fondos-inversion-inmobiliaria-chile
+14. Gestión, Proyecto de Ley 58-2026 (Bono de Arrendamiento y exoneración del IGV): https://gestion.pe/tu-dinero/inmobiliarias/jovenes-que-vivan-solos-tambien-podrian-acceder-al-bono-para-alquiler-noticia/
+15. CMS Grau, "Aprueban nueva Ley de la Vivienda de Interés Social (VIS)", Ley 32379: https://cms.law/en/per/publication/aprueban-nueva-ley-de-la-vivienda-de-interes-social-vis
+16. CMS Grau, proyecto de reglamento de la Ley 32379 (RM 269-2026-VIVIENDA): https://cms.law/en/per/publication/publican-el-proyecto-de-reglamento-de-la-ley-de-vivienda-de-interes-social-vis
+17. Urbania, rentabilidad bruta por distrito (actualizado al 27-may-2026): https://urbania.pe/blog/se-amplio-el-plazo-de-retornos-para-las-inversiones-en-inmuebles-de-lima/
+18. Gestión, ASEI y ADI sobre por qué no despega el multifamily: https://gestion.pe/tu-dinero/inmobiliarias/vivienda-alquiler-de-vivienda-venta-de-vivienda-multifamily-mvcs-viviendas-para-alquiler-no-despegan-lo-que-hace-falta-para-impulsarlas-noticia/
+19. Gestión, "Fondos y hasta seis inmobiliarias con interés en desarrollo multifamily" (18-nov-2024): https://gestion.pe/economia/empresas/fondos-y-hasta-seis-inmobiliarias-con-interes-en-desarrollo-multifamily-que-lo-gatillara-alquiler-de-departamentos-lima-moderna-lima-top-mercado-inmobiliario-noticia/
+20. Gestión, "Lima contará con más 1,000 departamentos de renta inmobiliaria en 2025" (23-jun-2024): https://gestion.pe/economia/empresas/lima-contara-con-mas-1000-departamentos-de-renta-inmobiliaria-en-2025-donde-estaran-multifamily-empresa-miraflores-san-isidro-noticia/
+21. Perú Retail, Parque Arauco lanza LiveSpace La Mar: https://www.peru-retail.com/parque-arauco-lanza-su-primer-proyecto-multifamily-en-peru-con-inversion-de-us-16-millones/
+22. Urbania, avisos de LiveSpace La Mar y Av. Ricardo Palma 251 (consultados en nov-2026): https://urbania.pe/inmueble/clasificado/alclapin-alquiler-de-departamento-en-miraflores-lima-1-dormitorio-147497922 y https://urbania.pe/buscar/alquiler-de-departamentos-en-huertos-de-san-antonio--lote-38-39---santiago-de-surco--lima--lima
+23. Gerencie (Colombia, ET art. 476, num. 15) y SII de Chile (arriendo sin amoblar no gravado con IVA): https://www.gerencie.com/impuesto-a-las-ventas-en-el-arrendamiento-de-inmuebles.html y https://www.sii.cl/preguntas_frecuentes/impuestos_mensuales/001_130_1214.htm
+24. TUO de la Ley del IGV (DS 055-99-EF); TUO de la Ley del Impuesto a la Renta (DS 179-2004-EF), arts. 39 y 52-A; Ley 30532 (FIBRA); D.Leg. 973 y DS 084-2007-EF; D.Leg. 776 (Tributación Municipal); D.Leg. 1177; Ley 29090; Ley 31313; Ley 32379. Texto oficial en el Sistema Peruano de Información Jurídica (SPIJ) y El Peruano.
+
+*Este artículo es un análisis financiero y no constituye asesoría legal, tributaria ni de inversión. Las afirmaciones normativas deben validarse con abogados y tributaristas antes de estructurar una operación.*

@@ -1,6 +1,6 @@
 # Formato Estándar de Reporte de Desempeño de Edificio de Vivienda en Renta (Rent Roll)
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -210,6 +210,14 @@ X2.1 El Administrador envía las Tablas A a E por conexión directa a la platafo
 **Opción X3. Revisión por tercero**
 
 X3.1 Un auditor independiente revisa el reporte trimestral antes de su envío.
+
+**Opción X4. Tabla de unidades con Bono y graduación**
+
+X4.1 Si el Edificio opera bajo el contrato 12 (derecho de superficie sobre suelo público), el reporte incluye una tabla adicional con: número y porcentaje de unidades con Bono; lista de espera de hogares elegibles; ingreso promedio declarado de los hogares con Bono; morosidad de la parte de la Renta a cargo del hogar; hogares cuyo Bono terminó en el periodo; y, de ellos, cuántos compraron vivienda (Techo Propio o Nuevo Crédito Mivivienda), cuántos siguen como inquilinos a renta de mercado y cuántos se mudaron.
+
+X4.2 El reporte incluye también los saldos de la cascada al cierre del trimestre: saldo de los inversionistas, saldo de la entidad concedente y excedente acumulado pagado a cada parte.
+
+X4.3 Los datos se reportan sin información personal de los hogares.
 
 ## Datos del Reporte
 

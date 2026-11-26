@@ -1,6 +1,6 @@
 # Acuerdo Directo Modelo entre Financista, Comprador y Vendedor (Direct Agreement)
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -174,6 +174,16 @@ X3.1 Si hay financista senior y mezzanine, la Contraparte comunica el Aviso de I
 **Opción X4. Contrato de construcción**
 
 X4.1 Si el Contrato Principal es el contrato de construcción, el constructor no abandona la obra durante el Periodo de Cura, salvo falta de pago de más de dos valorizaciones aprobadas.
+
+**Opción X5. Entidad pública concedente como parte**
+
+X5.1 Si el Edificio está sobre suelo público conforme al contrato 12 (derecho de superficie sobre suelo público), la entidad concedente firma este acuerdo en lugar del (o además del) Comprador.
+
+X5.2 La entidad concedente avisa al Financista de todo incumplimiento grave del superficiario y le otorga el periodo de cura indicado en los Datos del Contrato antes de terminar el derecho de superficie.
+
+X5.3 El Financista puede proponer un sustituto que sea Cesionario Calificado. La entidad concedente solo puede rechazarlo por no cumplir los requisitos o estar impedido de contratar con el Estado.
+
+X5.4 La terminación por interés público obliga a la entidad concedente a pagar la deuda pendiente del proyecto en el plazo indicado en el contrato de derecho de superficie.
 
 ## Datos del Contrato
 

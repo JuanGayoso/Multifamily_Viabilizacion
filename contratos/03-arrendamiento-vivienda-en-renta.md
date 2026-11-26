@@ -1,6 +1,6 @@
 # Contrato Modelo de Arrendamiento de Vivienda en Edificio de Renta
 
-Versión estándar 1.0 · Por: Juan Germán Gayoso Arnillas · 2026-11-25
+Versión estándar 1.1 · Por: Juan Germán Gayoso Arnillas · 2026-11-26
 
 ## Nota de uso
 
@@ -259,6 +259,18 @@ X5.2 La empresa responde por los ocupantes que designa.
 **Opción X6. Renovación con descuento por permanencia**
 
 X6.1 Si el Arrendatario renueva sin interrupción, el reajuste anual se reduce en los puntos porcentuales indicados en los Datos del Contrato.
+
+**Opción X7. Arrendamiento con Bono y ruta de graduación**
+
+X7.1 Si el Arrendatario es un hogar beneficiario del Bono de Arrendamiento para Vivienda (Ley 30952) u otro bono a la demanda, la Renta es la renta de mercado del Edificio. El Bono paga la parte indicada por la entidad que lo otorga y el Arrendatario paga el resto.
+
+X7.2 El Arrendador no aplica descuentos a la Renta por ser beneficiario del Bono. Si el Bono se suspende, el Arrendatario paga la Renta completa desde el mes siguiente al aviso.
+
+X7.3 El Arrendatario autoriza al Arrendador, si así lo marca en los Datos del Contrato, a reportar su historial de pago puntual a centrales de riesgo para acreditar su comportamiento de pago ante el sistema financiero.
+
+X7.4 El Arrendador informa al Arrendatario cada año sobre el saldo de su cuenta de ahorro del Bono y, un año antes del fin del Bono, sobre los programas de vivienda a los que puede postular (Techo Propio, Nuevo Crédito Mivivienda).
+
+X7.5 Al terminar el Bono, el Arrendatario puede seguir como inquilino a la Renta de mercado. El fin del Bono no es por sí mismo causal de terminación.
 
 ## Datos del Contrato
 
